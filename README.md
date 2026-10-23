@@ -12,6 +12,10 @@
 - Backend & APIs
 - Control de versiones con Git & GitHub
 
+## 📌 Estado del Repositorio
+- Conexión remota con GitHub configurada y verificada exitosamente.
+- Flujo de trabajo automatizado con Antigravity habilitado.
+
 ## 📂 Proyectos Destacados
 *(Próximamente...)*
 
