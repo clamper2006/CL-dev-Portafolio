@@ -1,0 +1,90 @@
+/* ═══ Contact Section ═══ */
+
+.contact {
+  background: var(--cl-bg-white);
+  text-align: center;
+}
+
+.contact__inner {
+  max-width: 640px;
+  margin-inline: auto;
+}
+
+.contact__title {
+  margin-bottom: var(--sp-5);
+}
+
+.contact__description {
+  font-size: var(--fs-md);
+  color: var(--cl-text-secondary);
+  line-height: var(--lh-relaxed);
+  margin-bottom: var(--sp-8);
+}
+
+.contact__actions {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--sp-5);
+  flex-wrap: wrap;
+}
+
+.contact__email {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--sp-2);
+  font-size: var(--fs-md);
+  font-weight: var(--fw-semibold);
+  color: var(--cl-blue);
+  transition: opacity var(--dur-fast);
+}
+
+.contact__email:hover {
+  opacity: 0.8;
+}
+
+/* ── Differentiated CTAs ── */
+.contact__routes {
+  display: flex;
+  gap: var(--sp-6);
+  justify-content: center;
+  margin-top: var(--sp-8);
+  flex-wrap: wrap;
+}
+
+.contact-route {
+  text-align: center;
+  padding: var(--sp-6);
+  border-radius: var(--radius-md);
+  border: 1px solid var(--cl-divider);
+  flex: 1;
+  min-width: 240px;
+  max-width: 320px;
+  transition: border-color var(--dur-fast), box-shadow var(--dur-fast);
+}
+
+.contact-route:hover {
+  border-color: var(--cl-blue);
+  box-shadow: var(--shadow-sm);
+}
+
+.contact-route__label {
+  font-size: var(--fs-xs);
+  font-weight: var(--fw-semibold);
+  letter-spacing: var(--ls-wider);
+  text-transform: uppercase;
+  color: var(--cl-text-muted);
+  margin-bottom: var(--sp-3);
+}
+
+.contact-route__title {
+  font-size: var(--fs-lg);
+  font-weight: var(--fw-bold);
+  margin-bottom: var(--sp-3);
+}
+
+.contact-route__text {
+  font-size: var(--fs-sm);
+  color: var(--cl-text-secondary);
+  margin-bottom: var(--sp-4);
+}

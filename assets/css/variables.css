@@ -1,0 +1,105 @@
+/* ═══════════════════════════════════════════════
+   CL DEVELOPER — Design Tokens
+   Fuente: Mockups de referencia + Repo Amplify
+   ═══════════════════════════════════════════════ */
+
+:root {
+  /* ── CL Developer Brand Colors ── */
+  --cl-bg-warm:        #F5F4F0;
+  --cl-bg-white:       #FFFFFF;
+  --cl-charcoal:       #101820;
+  --cl-text-secondary: #596273;
+  --cl-text-muted:     #737783;
+  --cl-blue:           #3478F6;
+  --cl-blue-rgb:       52, 120, 246;
+  --cl-blue-pale:      #EBF1FE;
+  --cl-divider:        #E5E5E7;
+
+  /* ── Amplify Official Brand Colors ── */
+  --amp-green:         #3BF087;
+  --amp-green-rgb:     59, 240, 135;
+  --amp-green-dark:    #22D46E;
+  --amp-bg-deep:       #0A0A0C;
+  --amp-bg-surface:    #131315;
+  --amp-ink-700:       #333333;
+  --amp-paper-700:     #E6E6E6;
+  --amp-paper-500:     #9A9AA4;
+  --amp-ink-900:       #17171A;
+
+  /* ── Typography ── */
+  --font-display: 'Playfair Display', Georgia, 'Times New Roman', serif;
+  --font-body:    'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  --font-mono:    'Space Mono', 'SF Mono', 'Consolas', monospace;
+  --font-amp:     'Space Grotesk', 'Plus Jakarta Sans', sans-serif;
+
+  /* Font sizes — fluid */
+  --fs-xs:   clamp(0.6875rem, 0.65rem + 0.15vw, 0.8125rem);
+  --fs-sm:   clamp(0.8125rem, 0.78rem + 0.15vw, 0.9375rem);
+  --fs-base: clamp(0.9375rem, 0.9rem + 0.18vw, 1.0625rem);
+  --fs-md:   clamp(1.125rem, 1.05rem + 0.35vw, 1.375rem);
+  --fs-lg:   clamp(1.375rem, 1.2rem + 0.7vw, 1.75rem);
+  --fs-xl:   clamp(1.75rem, 1.4rem + 1.5vw, 2.5rem);
+  --fs-2xl:  clamp(2rem, 1.5rem + 2.2vw, 3.5rem);
+  --fs-3xl:  clamp(2.5rem, 1.8rem + 3vw, 5rem);
+
+  /* Font weights */
+  --fw-regular:  400;
+  --fw-medium:   500;
+  --fw-semibold: 600;
+  --fw-bold:     700;
+
+  /* Line heights */
+  --lh-tight:   1.05;
+  --lh-snug:    1.2;
+  --lh-normal:  1.5;
+  --lh-relaxed: 1.7;
+
+  /* Letter spacing */
+  --ls-tight:  -0.02em;
+  --ls-normal:  0;
+  --ls-wide:    0.08em;
+  --ls-wider:   0.14em;
+
+  /* ── Layout ── */
+  --container-max:    1360px;
+  --container-narrow: 800px;
+  --container-pad:    clamp(1.25rem, 4vw, 4.5rem);
+  --section-gap:      clamp(4rem, 8vw, 8rem);
+
+  /* Spacing */
+  --sp-1:  0.25rem;
+  --sp-2:  0.5rem;
+  --sp-3:  0.75rem;
+  --sp-4:  1rem;
+  --sp-5:  1.5rem;
+  --sp-6:  2rem;
+  --sp-7:  2.5rem;
+  --sp-8:  3rem;
+  --sp-9:  4rem;
+  --sp-10: 5rem;
+
+  /* Radius */
+  --radius-sm:   6px;
+  --radius-md:   12px;
+  --radius-lg:   20px;
+  --radius-full: 999px;
+
+  /* Motion */
+  --ease-out:    cubic-bezier(0.16, 1, 0.3, 1);
+  --ease-in-out: cubic-bezier(0.65, 0, 0.35, 1);
+  --ease-soft:   cubic-bezier(0.22, 0.61, 0.36, 1);
+  --dur-instant: 120ms;
+  --dur-fast:    220ms;
+  --dur-base:    400ms;
+  --dur-slow:    700ms;
+
+  /* Shadows */
+  --shadow-sm: 0 1px 3px rgba(0,0,0,0.06);
+  --shadow-md: 0 4px 16px rgba(0,0,0,0.08);
+  --shadow-lg: 0 8px 32px rgba(0,0,0,0.10);
+
+  /* Z-index */
+  --z-header:      100;
+  --z-mobile-menu: 150;
+  --z-overlay:     200;
+}

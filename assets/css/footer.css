@@ -1,0 +1,122 @@
+/* ═══ Footer ═══ */
+
+.site-footer {
+  background: var(--cl-charcoal);
+  color: rgba(255,255,255,0.7);
+  padding-block: var(--sp-8);
+}
+
+.footer__inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: var(--sp-5);
+}
+
+/* ── Footer logo ── */
+.footer__brand {
+  display: flex;
+  align-items: center;
+  gap: var(--sp-3);
+}
+
+.footer__logo svg {
+  height: 24px;
+  width: auto;
+}
+
+.footer__brand-name {
+  font-size: var(--fs-sm);
+  font-weight: var(--fw-semibold);
+  color: rgba(255,255,255,0.9);
+}
+
+/* ── Footer nav ── */
+.footer__nav {
+  display: flex;
+  align-items: center;
+  gap: var(--sp-6);
+}
+
+.footer__nav a {
+  font-size: var(--fs-sm);
+  color: rgba(255,255,255,0.5);
+  transition: color var(--dur-fast);
+}
+
+.footer__nav a:hover {
+  color: rgba(255,255,255,0.9);
+}
+
+/* ── Footer center tagline ── */
+.footer__tagline {
+  display: flex;
+  align-items: center;
+  gap: var(--sp-4);
+  font-size: var(--fs-xs);
+  color: rgba(255,255,255,0.3);
+}
+
+.footer__tagline-dot {
+  width: 4px;
+  height: 4px;
+  border-radius: 50%;
+  background: var(--cl-blue);
+  flex-shrink: 0;
+}
+
+/* ── Footer right side ── */
+.footer__right {
+  display: flex;
+  align-items: center;
+  gap: var(--sp-5);
+}
+
+/* ── Social icons ── */
+.footer__social {
+  display: flex;
+  gap: var(--sp-4);
+}
+
+.footer__social a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 32px;
+  height: 32px;
+  color: rgba(255,255,255,0.4);
+  transition: color var(--dur-fast);
+}
+
+.footer__social a:hover {
+  color: rgba(255,255,255,0.9);
+}
+
+.footer__social svg {
+  width: 18px;
+  height: 18px;
+}
+
+/* ── Footer bottom ── */
+.footer__bottom {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: var(--sp-6);
+  padding-top: var(--sp-5);
+  border-top: 1px solid rgba(255,255,255,0.08);
+  font-size: var(--fs-xs);
+  color: rgba(255,255,255,0.3);
+}
+
+.footer__copy {
+  display: flex;
+  align-items: center;
+  gap: var(--sp-2);
+}
+
+.footer__bottom-tagline {
+  font-style: italic;
+  color: rgba(255,255,255,0.25);
+}

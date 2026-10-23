@@ -1,0 +1,536 @@
+<!DOCTYPE html>
+<html lang="es" data-lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CL Developer — Ideas que se convierten en productos digitales</title>
+  <meta name="description" content="Portafolio de César Alejandro — Desarrollador de software. Diseño y desarrollo web y móvil. Soluciones digitales con impacto real.">
+  <meta name="author" content="César Alejandro — CL Developer">
+
+  <!-- Favicon -->
+  <link rel="icon" href="favicon/favicon.svg" type="image/svg+xml">
+  <link rel="manifest" href="manifest.webmanifest">
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="CL Developer — Portafolio">
+  <meta property="og:description" content="Ideas que se convierten en productos digitales.">
+  <meta property="og:type" content="website">
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@1,400;1,500&family=Plus+Jakarta+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&family=Space+Mono&display=swap" rel="stylesheet">
+
+  <!-- Stylesheets -->
+  <link rel="stylesheet" href="assets/css/variables.css">
+  <link rel="stylesheet" href="assets/css/reset.css">
+  <link rel="stylesheet" href="assets/css/base.css">
+  <link rel="stylesheet" href="assets/css/layout.css">
+  <link rel="stylesheet" href="assets/css/header.css">
+  <link rel="stylesheet" href="assets/css/hero.css">
+  <link rel="stylesheet" href="assets/css/projects.css">
+  <link rel="stylesheet" href="assets/css/about.css">
+  <link rel="stylesheet" href="assets/css/amplify.css">
+  <link rel="stylesheet" href="assets/css/contact.css">
+  <link rel="stylesheet" href="assets/css/footer.css">
+  <link rel="stylesheet" href="assets/css/utilities.css">
+  <link rel="stylesheet" href="assets/css/responsive.css">
+</head>
+<body>
+
+  <!-- Skip link -->
+  <a href="#main-content" class="skip-link">Ir al contenido principal</a>
+
+  <!-- ═══════════════════════════════════════
+       HEADER
+       ═══════════════════════════════════════ -->
+  <header class="site-header" id="site-header">
+    <div class="header__inner">
+
+      <!-- Logo -->
+      <a href="#inicio" class="header__logo" aria-label="CL Developer — Inicio">
+        <svg viewBox="0 0 120 40" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+          <!-- C letterform -->
+          <path d="M4 8C4 4 7 1 12 1C15 1 17.5 2.5 19 5L16 7C15 5.5 13.5 4.5 12 4.5C9 4.5 7.5 6.5 7.5 8V24C7.5 25.5 9 27.5 12 27.5C13.5 27.5 15 26.5 16 25L19 27C17.5 29.5 15 31 12 31C7 31 4 28 4 24V8Z" fill="currentColor"/>
+          <!-- L letterform -->
+          <path d="M24 1H27.5V27H40V31H24V1Z" fill="currentColor"/>
+          <!-- Blue dot -->
+          <circle cx="44" cy="27" r="4" fill="#3478F6"/>
+        </svg>
+      </a>
+
+      <!-- Desktop Nav -->
+      <nav class="header__nav" aria-label="Navegación principal">
+        <a href="#inicio" class="nav__link is-active" data-i18n="nav.inicio">Inicio</a>
+        <a href="#proyectos" class="nav__link" data-i18n="nav.proyectos">Proyectos</a>
+        <a href="#sobre-mi" class="nav__link" data-i18n="nav.sobre-mi">Sobre mí</a>
+        <a href="#amplify" class="nav__link" data-i18n="nav.amplify">Amplify</a>
+        <a href="#contacto" class="nav__link" data-i18n="nav.contacto">Contacto</a>
+      </nav>
+
+      <!-- Right side: Lang + Mobile button -->
+      <div class="header__actions" style="display:flex;align-items:center;gap:var(--sp-4);">
+        <div class="lang-switcher">
+          <button class="lang-switcher__btn is-active" data-lang="es" aria-label="Cambiar a español">ES</button>
+          <span class="lang-switcher__sep">/</span>
+          <button class="lang-switcher__btn" data-lang="en" aria-label="Switch to English">EN</button>
+        </div>
+      </div>
+
+      <!-- Mobile menu button -->
+      <button class="mobile-menu-btn" aria-expanded="false" aria-controls="mobile-menu" aria-label="Abrir menú">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+  </header>
+
+  <!-- Mobile Menu Overlay -->
+  <div class="mobile-menu" id="mobile-menu" role="dialog" aria-label="Menú de navegación">
+    <nav aria-label="Navegación móvil">
+      <a href="#inicio" class="nav__link" data-i18n="nav.inicio">Inicio</a>
+      <a href="#proyectos" class="nav__link" data-i18n="nav.proyectos">Proyectos</a>
+      <a href="#sobre-mi" class="nav__link" data-i18n="nav.sobre-mi">Sobre mí</a>
+      <a href="#amplify" class="nav__link" data-i18n="nav.amplify">Amplify</a>
+      <a href="#contacto" class="nav__link" data-i18n="nav.contacto">Contacto</a>
+    </nav>
+    <div class="lang-switcher">
+      <button class="lang-switcher__btn is-active" data-lang="es">ES</button>
+      <span class="lang-switcher__sep">/</span>
+      <button class="lang-switcher__btn" data-lang="en">EN</button>
+    </div>
+  </div>
+
+  <main id="main-content">
+
+    <!-- ═══════════════════════════════════════
+         HERO
+         ═══════════════════════════════════════ -->
+    <section class="hero section" id="inicio">
+      <div class="container">
+        <div class="hero__inner">
+
+          <!-- Text -->
+          <div class="hero__content">
+            <p class="eyebrow hero__eyebrow" data-i18n="hero.eyebrow">DESARROLLADOR DE SOFTWARE</p>
+
+            <h1 class="hero__title">
+              <span data-i18n="hero.headline.1">Ideas que se convierten en</span><br>
+              <span class="text-accent" data-i18n="hero.headline.2">productos digitales.</span>
+            </h1>
+
+            <p class="hero__description" data-i18n="hero.description">
+              Desarrollo soluciones web y móviles que combinan diseño, tecnología y estrategia. Acompaño a marcas y personas a construir productos que generan impacto.
+            </p>
+
+            <div class="hero__actions">
+              <a href="#proyectos" class="btn btn--primary">
+                <span data-i18n="hero.cta.primary">Ver proyectos</span>
+                <svg class="btn__arrow" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+              </a>
+              <a href="#contacto" class="btn btn--secondary">
+                <span data-i18n="hero.cta.secondary">Contactar</span>
+                <svg class="btn__arrow" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+              </a>
+            </div>
+
+            <!-- Stats -->
+            <div class="hero__stats">
+              <div class="stat">
+                <span class="stat__value" data-i18n="hero.stat.1.value">+5</span>
+                <span class="stat__label" data-i18n="hero.stat.1.label">Años de experiencia</span>
+              </div>
+              <div class="stat">
+                <span class="stat__value" data-i18n="hero.stat.2.value">10+</span>
+                <span class="stat__label" data-i18n="hero.stat.2.label">Proyectos completados</span>
+              </div>
+              <div class="stat">
+                <span class="stat__value" data-i18n="hero.stat.3.value">100%</span>
+                <span class="stat__label" data-i18n="hero.stat.3.label">Compromiso con la calidad</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Orbital Visual -->
+          <div class="hero__visual">
+            <div class="orbital-container" aria-hidden="true">
+              <div class="orbital-ring"></div>
+              <div class="orbital-ring"></div>
+              <div class="orbital-ring"></div>
+              <div class="orbital-ring"></div>
+              <div class="orbital-node"></div>
+              <div class="orbital-node"></div>
+              <div class="orbital-node"></div>
+              <div class="orbital-node"></div>
+              <div class="orbital-node"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══════════════════════════════════════
+         PROJECTS
+         ═══════════════════════════════════════ -->
+    <section class="projects section" id="proyectos">
+      <div class="container">
+
+        <div class="section__header" data-reveal>
+          <div class="section__header-row">
+            <div>
+              <p class="eyebrow" data-i18n="projects.eyebrow">PROYECTOS DESTACADOS</p>
+              <h2>
+                <span data-i18n="projects.title.1">Soluciones reales para</span><br>
+                <span class="text-accent" data-i18n="projects.title.2">problemas reales.</span>
+              </h2>
+            </div>
+            <a href="#" class="section__link">
+              <span data-i18n="projects.viewAll">Ver todos los proyectos</span>
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+            </a>
+          </div>
+        </div>
+
+        <div class="grid-3col" data-reveal-group>
+
+          <!-- Project 1: Flyvest -->
+          <article class="project-card" data-reveal>
+            <div class="project-card__image">
+              <div class="project-card__placeholder">
+                <span>Flyvest — Screenshot pendiente</span>
+              </div>
+            </div>
+            <div class="project-card__info">
+              <div class="project-card__header">
+                <h3 class="project-card__name" data-i18n="project.1.name">Flyvest</h3>
+                <svg class="project-card__arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17 17 7"/><path d="M7 7h10v10"/></svg>
+              </div>
+              <p class="project-card__meta" data-i18n="project.1.meta">App Móvil / Fintech</p>
+              <p class="project-card__description" data-i18n="project.1.description">Plataforma de gestión y cobro para cobradores de campo. Optimizada para rendimiento y facilidad de uso.</p>
+              <a href="#" class="project-card__link">
+                <span data-i18n="projects.viewProject">Ver proyecto</span>
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+              </a>
+            </div>
+          </article>
+
+          <!-- Project 2: Coach Management -->
+          <article class="project-card" data-reveal>
+            <div class="project-card__image">
+              <div class="project-card__placeholder">
+                <span>Coach Management — Screenshot pendiente</span>
+              </div>
+            </div>
+            <div class="project-card__info">
+              <div class="project-card__header">
+                <h3 class="project-card__name" data-i18n="project.2.name">Coach Management</h3>
+                <svg class="project-card__arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17 17 7"/><path d="M7 7h10v10"/></svg>
+              </div>
+              <p class="project-card__meta" data-i18n="project.2.meta">SaaS / Gestión Deportiva</p>
+              <p class="project-card__description" data-i18n="project.2.description">Plataforma para entrenadores y academias deportivas. Gestión de clientes, rutinas y pagos.</p>
+              <a href="#" class="project-card__link">
+                <span data-i18n="projects.viewProject">Ver proyecto</span>
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+              </a>
+            </div>
+          </article>
+
+          <!-- Project 3: Amplify Studio -->
+          <article class="project-card" data-reveal>
+            <div class="project-card__image">
+              <div class="project-card__placeholder">
+                <span>Amplify Studio — Screenshot pendiente</span>
+              </div>
+            </div>
+            <div class="project-card__info">
+              <div class="project-card__header">
+                <h3 class="project-card__name" data-i18n="project.3.name">Amplify Studio</h3>
+                <svg class="project-card__arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17 17 7"/><path d="M7 7h10v10"/></svg>
+              </div>
+              <p class="project-card__meta" data-i18n="project.3.meta">Web / Agencia Digital</p>
+              <p class="project-card__description" data-i18n="project.3.description">Sitio web corporativo y panel de gestión para la agencia de desarrollo, Amplify.</p>
+              <a href="https://clamper2006.github.io/amplify/" target="_blank" rel="noopener noreferrer" class="project-card__link">
+                <span data-i18n="projects.viewProject">Ver proyecto</span>
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+              </a>
+            </div>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══════════════════════════════════════
+         ABOUT
+         ═══════════════════════════════════════ -->
+    <section class="about section" id="sobre-mi">
+      <div class="container">
+        <div class="section__header" data-reveal>
+          <p class="eyebrow" data-i18n="about.eyebrow">SOBRE MÍ</p>
+        </div>
+
+        <div class="about__inner">
+          <div class="about__content" data-reveal>
+            <h2 class="about__title">
+              <span data-i18n="about.title.1">Tecnología con</span><br>
+              <span class="text-accent" data-i18n="about.title.2">propósito.</span>
+            </h2>
+
+            <p class="about__description" data-i18n="about.description">
+              Soy un desarrollador apasionado por crear soluciones digitales que mejoren la vida de las personas y los negocios. Me enfoco en el desarrollo web y móvil, con un interés especial en la experiencia de usuario, la arquitectura limpia y el rendimiento.
+            </p>
+
+            <a href="#contacto" class="btn btn--primary about__cta">
+              <span data-i18n="about.cta">Conocer más</span>
+              <svg class="btn__arrow" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+            </a>
+          </div>
+
+          <div class="about__skills" data-reveal-group>
+
+            <!-- Frontend -->
+            <div class="skill-group">
+              <div class="skill-group__icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg>
+              </div>
+              <div>
+                <p class="skill-group__title" data-i18n="about.skill.1.title">Frontend</p>
+                <p class="skill-group__items" data-i18n="about.skill.1.items">React, Next.js, Vue</p>
+              </div>
+            </div>
+
+            <!-- Backend -->
+            <div class="skill-group">
+              <div class="skill-group__icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="3" width="20" height="14" rx="2"/><path d="M8 21h8"/><path d="M12 17v4"/></svg>
+              </div>
+              <div>
+                <p class="skill-group__title" data-i18n="about.skill.2.title">Backend</p>
+                <p class="skill-group__items" data-i18n="about.skill.2.items">Node.js, Laravel, Python</p>
+              </div>
+            </div>
+
+            <!-- Mobile -->
+            <div class="skill-group">
+              <div class="skill-group__icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="5" y="2" width="14" height="20" rx="2"/><path d="M12 18h.01"/></svg>
+              </div>
+              <div>
+                <p class="skill-group__title" data-i18n="about.skill.3.title">Mobile</p>
+                <p class="skill-group__items" data-i18n="about.skill.3.items">Flutter, React Native</p>
+              </div>
+            </div>
+
+            <!-- Tools -->
+            <div class="skill-group">
+              <div class="skill-group__icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/></svg>
+              </div>
+              <div>
+                <p class="skill-group__title" data-i18n="about.skill.4.title">Herramientas</p>
+                <p class="skill-group__items" data-i18n="about.skill.4.items">Git, Docker, Figma, AWS</p>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══════════════════════════════════════
+         AMPLIFY SECTION
+         Official brand colors: #3BF087 green, #0A0A0C dark bg
+         ═══════════════════════════════════════ -->
+    <section class="amplify-section" id="amplify">
+      <div class="amp-glow" aria-hidden="true"></div>
+      <div class="amp-glow amp-glow--secondary" aria-hidden="true"></div>
+
+      <div class="container">
+        <div class="amplify__inner">
+
+          <!-- Brand side -->
+          <div class="amplify__brand" data-reveal>
+            <!-- Official Amplify logo -->
+            <div class="amplify__logo">
+              <img src="assets/amplify/logos/isotype-standalone.svg" alt="" width="32" height="40" aria-hidden="true">
+              <img src="assets/amplify/logos/amplify-lockup-dark.png" alt="Amplify" height="28">
+            </div>
+
+            <p class="amplify__eyebrow" data-i18n="amplify.eyebrow">PARTE DE MI TRAYECTORIA</p>
+
+            <h2 class="amplify__title">
+              <span data-i18n="amplify.title.1">Las buenas</span>
+              <em class="text-accent-amp" data-i18n="amplify.title.accent1">ideas</em><br>
+              <span data-i18n="amplify.title.2">crecen en</span>
+              <em class="text-accent-amp" data-i18n="amplify.title.accent2">equipo.</em>
+            </h2>
+
+            <p class="amplify__description" data-i18n="amplify.description">
+              En Amplify convertimos desafíos empresariales en productos de software, combinando estrategia, diseño e ingeniería.
+            </p>
+
+            <a href="https://clamper2006.github.io/amplify/" target="_blank" rel="noopener noreferrer" class="btn--amplify">
+              <span data-i18n="amplify.cta">Conocer Amplify</span>
+              <svg class="btn__arrow" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+            </a>
+          </div>
+
+          <!-- Services side -->
+          <div class="amplify__services" data-reveal-group>
+
+            <div class="amp-service">
+              <div class="amp-service__icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg>
+              </div>
+              <div>
+                <p class="amp-service__title" data-i18n="amplify.service.1.title">Ingeniería</p>
+                <p class="amp-service__description" data-i18n="amplify.service.1.desc">Desarrollo de software</p>
+              </div>
+            </div>
+
+            <div class="amp-service">
+              <div class="amp-service__icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M3 9h18"/><path d="M9 21V9"/></svg>
+              </div>
+              <div>
+                <p class="amp-service__title" data-i18n="amplify.service.2.title">Producto</p>
+                <p class="amp-service__description" data-i18n="amplify.service.2.desc">Diseño y estrategia</p>
+              </div>
+            </div>
+
+            <div class="amp-service">
+              <div class="amp-service__icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+              </div>
+              <div>
+                <p class="amp-service__title" data-i18n="amplify.service.3.title">Equipo</p>
+                <p class="amp-service__description" data-i18n="amplify.service.3.desc">Talento y colaboración</p>
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+        <div class="amplify__bottom" data-reveal>
+          <span data-i18n="amplify.bottom.left">AMPLIFY / BRAND ZONE</span>
+          <span data-i18n="amplify.bottom.right">GRANDES IDEAS. MEJORES EQUIPOS.</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══════════════════════════════════════
+         CONTACT
+         ═══════════════════════════════════════ -->
+    <section class="contact section" id="contacto">
+      <div class="container">
+        <div class="contact__inner" data-reveal>
+          <p class="eyebrow" data-i18n="contact.eyebrow">CONTACTO</p>
+
+          <h2 class="contact__title">
+            <span data-i18n="contact.title.1">¿Tienes un proyecto en</span><br>
+            <span class="text-accent" data-i18n="contact.title.2">mente?</span>
+          </h2>
+
+          <p class="contact__description" data-i18n="contact.description">
+            Me encantaría escuchar tu idea. Cuéntame qué necesitas y encontremos la mejor solución juntos.
+          </p>
+
+          <div class="contact__actions">
+            <a href="mailto:cesarlamper15.03.2006@gmail.com" class="contact__email">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
+              <span>cesarlamper15.03.2006@gmail.com</span>
+            </a>
+          </div>
+
+          <div class="contact__routes" data-reveal-group>
+            <div class="contact-route">
+              <p class="contact-route__label" data-i18n="contact.route.1.label">PROYECTO PERSONAL</p>
+              <h3 class="contact-route__title" data-i18n="contact.route.1.title">CL Developer</h3>
+              <p class="contact-route__text" data-i18n="contact.route.1.text">Para proyectos individuales, consultorías y colaboraciones directas.</p>
+              <a href="mailto:cesarlamper15.03.2006@gmail.com" class="btn btn--primary">
+                <span data-i18n="contact.route.1.cta">Contactar</span>
+                <svg class="btn__arrow" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+              </a>
+            </div>
+            <div class="contact-route">
+              <p class="contact-route__label" data-i18n="contact.route.2.label">PROYECTO EMPRESARIAL</p>
+              <h3 class="contact-route__title" data-i18n="contact.route.2.title">Amplify</h3>
+              <p class="contact-route__text" data-i18n="contact.route.2.text">Para productos digitales a escala con equipo completo.</p>
+              <a href="https://clamper2006.github.io/amplify/" target="_blank" rel="noopener noreferrer" class="btn btn--secondary">
+                <span data-i18n="contact.route.2.cta">Conocer Amplify</span>
+                <svg class="btn__arrow" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ═══════════════════════════════════════
+       FOOTER
+       ═══════════════════════════════════════ -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer__inner">
+
+        <!-- Brand -->
+        <div class="footer__brand">
+          <div class="footer__logo">
+            <svg viewBox="0 0 120 40" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+              <path d="M4 8C4 4 7 1 12 1C15 1 17.5 2.5 19 5L16 7C15 5.5 13.5 4.5 12 4.5C9 4.5 7.5 6.5 7.5 8V24C7.5 25.5 9 27.5 12 27.5C13.5 27.5 15 26.5 16 25L19 27C17.5 29.5 15 31 12 31C7 31 4 28 4 24V8Z" fill="currentColor"/>
+              <path d="M24 1H27.5V27H40V31H24V1Z" fill="currentColor"/>
+              <circle cx="44" cy="27" r="4" fill="#3478F6"/>
+            </svg>
+          </div>
+          <span class="footer__brand-name">CL Developer</span>
+        </div>
+
+        <!-- Nav -->
+        <nav class="footer__nav" aria-label="Navegación del footer">
+          <a href="#inicio" data-i18n="nav.inicio">Inicio</a>
+          <a href="#proyectos" data-i18n="nav.proyectos">Proyectos</a>
+          <a href="#sobre-mi" data-i18n="nav.sobre-mi">Sobre mí</a>
+          <a href="#amplify" data-i18n="nav.amplify">Amplify</a>
+          <a href="#contacto" data-i18n="nav.contacto">Contacto</a>
+        </nav>
+
+        <!-- Right -->
+        <div class="footer__right">
+          <div class="footer__social">
+            <a href="https://github.com/clamper2006" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
+              <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0 0 24 12c0-6.63-5.37-12-12-12z"/></svg>
+            </a>
+          </div>
+          <div class="lang-switcher">
+            <button class="lang-switcher__btn is-active" data-lang="es">ES</button>
+            <span class="lang-switcher__sep">/</span>
+            <button class="lang-switcher__btn" data-lang="en">EN</button>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Bottom bar -->
+      <div class="footer__bottom">
+        <div class="footer__copy">
+          <span data-i18n="footer.copy">© 2026 CL Developer. Todos los derechos reservados.</span>
+        </div>
+        <div class="footer__tagline">
+          <span class="footer__tagline-dot"></span>
+          <span data-i18n="footer.bottom.tagline">Ideas. Código. Impacto.</span>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="assets/js/i18n.js"></script>
+  <script src="assets/js/navigation.js"></script>
+  <script src="assets/js/orbital.js"></script>
+  <script src="assets/js/animations.js"></script>
+  <script src="assets/js/main.js"></script>
+</body>
+</html>

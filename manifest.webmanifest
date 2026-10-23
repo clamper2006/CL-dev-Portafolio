@@ -1,0 +1,16 @@
+{
+  "name": "CL Developer — Portafolio",
+  "short_name": "CL Developer",
+  "description": "Portafolio profesional de César Alejandro — Soluciones digitales y desarrollo de software.",
+  "start_url": "./index.html",
+  "display": "standalone",
+  "background_color": "#F5F4F0",
+  "theme_color": "#101820",
+  "icons": [
+    {
+      "src": "favicon/favicon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml"
+    }
+  ]
+}

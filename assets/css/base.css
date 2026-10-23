@@ -1,0 +1,70 @@
+/* ═══ Base Typography & Global Styles ═══ */
+
+body {
+  font-family: var(--font-body);
+  font-weight: var(--fw-regular);
+  font-size: var(--fs-base);
+  line-height: var(--lh-normal);
+  color: var(--cl-charcoal);
+  background-color: var(--cl-bg-warm);
+}
+
+/* ── Headings ── */
+h1, h2, h3, h4 {
+  font-family: var(--font-body);
+  font-weight: var(--fw-bold);
+  line-height: var(--lh-snug);
+  letter-spacing: var(--ls-tight);
+  color: var(--cl-charcoal);
+}
+
+h1 { font-size: var(--fs-3xl); }
+h2 { font-size: var(--fs-2xl); }
+h3 { font-size: var(--fs-xl); }
+h4 { font-size: var(--fs-lg); }
+
+/* ── Italic serif accent ── */
+.text-accent {
+  font-family: var(--font-display);
+  font-style: italic;
+  font-weight: var(--fw-regular);
+  color: var(--cl-blue);
+}
+
+/* ── Eyebrow labels ── */
+.eyebrow {
+  font-family: var(--font-body);
+  font-size: var(--fs-xs);
+  font-weight: var(--fw-semibold);
+  letter-spacing: var(--ls-wider);
+  text-transform: uppercase;
+  color: var(--cl-text-muted);
+}
+
+/* ── Body text ── */
+.text-secondary {
+  color: var(--cl-text-secondary);
+}
+
+.text-muted {
+  color: var(--cl-text-muted);
+}
+
+/* ── Links ── */
+a:focus-visible {
+  outline: 2px solid var(--cl-blue);
+  outline-offset: 3px;
+  border-radius: 2px;
+}
+
+/* ── Selection ── */
+::selection {
+  background: rgba(var(--cl-blue-rgb), 0.15);
+  color: var(--cl-charcoal);
+}
+
+/* ── Smooth image rendering ── */
+img {
+  height: auto;
+  object-fit: cover;
+}

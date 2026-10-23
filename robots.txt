@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://clamper2006.github.io/CL-dev-Portafolio/sitemap.xml

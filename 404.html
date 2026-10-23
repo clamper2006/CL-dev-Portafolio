@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Página no encontrada — CL Developer</title>
+  <link rel="icon" href="favicon/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="assets/css/variables.css">
+  <link rel="stylesheet" href="assets/css/reset.css">
+  <link rel="stylesheet" href="assets/css/base.css">
+  <style>
+    .not-found {
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      padding: var(--sp-6);
+    }
+    .not-found__code {
+      font-size: clamp(4rem, 15vw, 8rem);
+      font-weight: var(--fw-bold);
+      color: var(--cl-blue);
+      line-height: 1;
+      margin-bottom: var(--sp-3);
+    }
+    .not-found__msg {
+      font-size: var(--fs-lg);
+      color: var(--cl-text-secondary);
+      margin-bottom: var(--sp-6);
+    }
+    .btn-home {
+      display: inline-flex;
+      align-items: center;
+      padding: var(--sp-3) var(--sp-6);
+      background: var(--cl-charcoal);
+      color: var(--cl-bg-white);
+      border-radius: var(--radius-full);
+      font-weight: var(--fw-semibold);
+      font-size: var(--fs-sm);
+    }
+  </style>
+</head>
+<body>
+  <div class="not-found">
+    <div>
+      <div class="not-found__code">404</div>
+      <p class="not-found__msg">La página que buscas no existe o ha sido movida.</p>
+      <a href="index.html" class="btn-home">Volver al inicio</a>
+    </div>
+  </div>
+</body>
+</html>

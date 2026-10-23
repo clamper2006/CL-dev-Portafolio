@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 40" fill="none">
+  <!-- C letterform -->
+  <path d="M4 8C4 4 7 1 12 1C15 1 17.5 2.5 19 5L16 7C15 5.5 13.5 4.5 12 4.5C9 4.5 7.5 6.5 7.5 8V24C7.5 25.5 9 27.5 12 27.5C13.5 27.5 15 26.5 16 25L19 27C17.5 29.5 15 31 12 31C7 31 4 28 4 24V8Z" fill="#101820"/>
+  <!-- L letterform -->
+  <path d="M24 1H27.5V27H40V31H24V1Z" fill="#101820"/>
+  <!-- Electric Blue dot -->
+  <circle cx="44" cy="27" r="4" fill="#3478F6"/>
+  <!-- Developer wordmark (editorial sans) -->
+  <text x="56" y="27" font-family="'Plus Jakarta Sans', sans-serif" font-weight="600" font-size="14" fill="#101820" letter-spacing="-0.02em">Developer</text>
+</svg>

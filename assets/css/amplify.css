@@ -1,0 +1,185 @@
+/* ═══ Amplify Section — Official Brand Integration ═══
+   Colors from official Amplify repository:
+   accent: #3BF087 | dark bg: #0A0A0C | surface: #131315
+   ═══════════════════════════════════════════════════════ */
+
+.amplify-section {
+  position: relative;
+  background: var(--amp-bg-deep);
+  color: var(--amp-paper-700);
+  padding-block: var(--section-gap);
+  overflow: hidden;
+}
+
+/* ── Transition gradient from light to dark ── */
+.amplify-section::before {
+  content: '';
+  position: absolute;
+  top: -100px;
+  left: 0;
+  right: 0;
+  height: 100px;
+  background: linear-gradient(to bottom, var(--cl-bg-warm) 0%, var(--amp-bg-deep) 100%);
+  pointer-events: none;
+}
+
+/* ── Background glow (brand-faithful) ── */
+.amp-glow {
+  position: absolute;
+  width: 500px;
+  height: 500px;
+  background: radial-gradient(circle, rgba(var(--amp-green-rgb), 0.1) 0%, transparent 70%);
+  top: 10%;
+  left: 50%;
+  transform: translateX(-50%);
+  pointer-events: none;
+  z-index: 0;
+}
+
+.amp-glow--secondary {
+  width: 300px;
+  height: 300px;
+  background: radial-gradient(circle, rgba(var(--amp-green-rgb), 0.06) 0%, transparent 70%);
+  top: auto;
+  bottom: 10%;
+  left: 20%;
+  transform: none;
+}
+
+/* ── Amplify inner layout ── */
+.amplify__inner {
+  position: relative;
+  z-index: 1;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--sp-9);
+  align-items: center;
+}
+
+/* ── Logo area ── */
+.amplify__brand {
+  display: flex;
+  flex-direction: column;
+  gap: var(--sp-7);
+}
+
+.amplify__logo {
+  display: flex;
+  align-items: center;
+  gap: var(--sp-3);
+}
+
+.amplify__logo img {
+  height: 40px;
+  width: auto;
+}
+
+.amplify__eyebrow {
+  font-size: var(--fs-xs);
+  font-weight: var(--fw-semibold);
+  letter-spacing: var(--ls-wider);
+  text-transform: uppercase;
+  color: var(--amp-paper-500);
+}
+
+.amplify__title {
+  font-family: var(--font-amp);
+  font-size: var(--fs-2xl);
+  font-weight: var(--fw-bold);
+  line-height: var(--lh-snug);
+  color: var(--amp-paper-700);
+}
+
+.amplify__title .text-accent-amp {
+  font-family: var(--font-display);
+  font-style: italic;
+  color: var(--amp-paper-700);
+}
+
+.amplify__description {
+  font-size: var(--fs-base);
+  color: var(--amp-paper-500);
+  line-height: var(--lh-relaxed);
+  max-width: 480px;
+}
+
+/* ── Amplify CTA ── */
+.btn--amplify {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--sp-2);
+  padding: var(--sp-3) var(--sp-5);
+  border: 1px solid var(--amp-green);
+  color: var(--amp-green);
+  border-radius: var(--radius-full);
+  font-size: var(--fs-sm);
+  font-weight: var(--fw-semibold);
+  transition: all var(--dur-base) var(--ease-out);
+  background: transparent;
+}
+
+.btn--amplify:hover {
+  background: rgba(var(--amp-green-rgb), 0.1);
+  transform: translateY(-1px);
+  box-shadow: 0 0 20px rgba(var(--amp-green-rgb), 0.15);
+}
+
+.btn--amplify .btn__arrow {
+  color: var(--amp-green);
+}
+
+/* ── Amplify services sidebar ── */
+.amplify__services {
+  display: flex;
+  flex-direction: column;
+  gap: var(--sp-7);
+  padding-left: var(--sp-8);
+  border-left: 1px solid rgba(var(--amp-green-rgb), 0.15);
+}
+
+.amp-service {
+  display: flex;
+  align-items: flex-start;
+  gap: var(--sp-4);
+}
+
+.amp-service__icon {
+  flex-shrink: 0;
+  width: 36px;
+  height: 36px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--amp-green);
+}
+
+.amp-service__icon svg {
+  width: 22px;
+  height: 22px;
+}
+
+.amp-service__title {
+  font-size: var(--fs-base);
+  font-weight: var(--fw-semibold);
+  color: var(--amp-paper-700);
+  margin-bottom: var(--sp-1);
+}
+
+.amp-service__description {
+  font-size: var(--fs-sm);
+  color: var(--amp-paper-500);
+}
+
+/* ── Bottom bar ── */
+.amplify__bottom {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: var(--sp-9);
+  padding-top: var(--sp-6);
+  border-top: 1px solid rgba(255,255,255,0.06);
+  font-size: var(--fs-xs);
+  color: var(--amp-paper-500);
+  letter-spacing: var(--ls-wide);
+  text-transform: uppercase;
+}

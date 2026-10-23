@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" fill="none">
+  <rect width="48" height="48" rx="10" fill="#101820"/>
+  <!-- C letterform -->
+  <path d="M10 14C10 10 13 7 17.5 7C20.5 7 23 8.5 24.5 11L21.5 13C20.5 11.5 19 10.5 17.5 10.5C14.5 10.5 13.5 12.5 13.5 14V30C13.5 31.5 14.5 33.5 17.5 33.5C19 33.5 20.5 32.5 21.5 31L24.5 33C23 35.5 20.5 37 17.5 37C13 37 10 34 10 30V14Z" fill="#FFFFFF"/>
+  <!-- L letterform -->
+  <path d="M28 7H31.5V33H38V37H28V7Z" fill="#FFFFFF"/>
+  <!-- Electric Blue dot -->
+  <circle cx="41" cy="34" r="3.5" fill="#3478F6"/>
+</svg>

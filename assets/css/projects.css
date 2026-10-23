@@ -1,0 +1,130 @@
+/* ═══ Projects Section ═══ */
+
+.projects {
+  background: var(--cl-bg-white);
+}
+
+/* ── Section link ── */
+.section__link {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--sp-2);
+  font-size: var(--fs-sm);
+  font-weight: var(--fw-semibold);
+  color: var(--cl-blue);
+  transition: gap var(--dur-fast) var(--ease-out);
+}
+
+.section__link:hover {
+  gap: var(--sp-3);
+}
+
+/* ── Project cards ── */
+.project-card {
+  display: flex;
+  flex-direction: column;
+  border-radius: var(--radius-md);
+  overflow: hidden;
+  transition: transform var(--dur-base) var(--ease-out),
+              box-shadow var(--dur-base) var(--ease-out);
+  cursor: pointer;
+}
+
+.project-card:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-lg);
+}
+
+/* ── Project image ── */
+.project-card__image {
+  aspect-ratio: 16 / 10;
+  overflow: hidden;
+  background: var(--cl-bg-warm);
+  border-radius: var(--radius-md);
+}
+
+.project-card__image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform var(--dur-slow) var(--ease-out);
+}
+
+.project-card:hover .project-card__image img {
+  transform: scale(1.03);
+}
+
+/* Placeholder for missing project screenshots */
+.project-card__placeholder {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(135deg, var(--cl-bg-warm) 0%, #e8e7e3 100%);
+  color: var(--cl-text-muted);
+  font-size: var(--fs-sm);
+  font-weight: var(--fw-medium);
+}
+
+/* ── Project info ── */
+.project-card__info {
+  padding: var(--sp-5) var(--sp-1) var(--sp-3);
+}
+
+.project-card__header {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  margin-bottom: var(--sp-2);
+}
+
+.project-card__name {
+  font-size: var(--fs-lg);
+  font-weight: var(--fw-bold);
+  line-height: var(--lh-snug);
+}
+
+.project-card__arrow {
+  flex-shrink: 0;
+  width: 20px;
+  height: 20px;
+  color: var(--cl-text-muted);
+  transition: transform var(--dur-fast) var(--ease-out),
+              color var(--dur-fast);
+}
+
+.project-card:hover .project-card__arrow {
+  transform: translate(2px, -2px);
+  color: var(--cl-blue);
+}
+
+.project-card__meta {
+  font-size: var(--fs-xs);
+  font-weight: var(--fw-medium);
+  color: var(--cl-text-muted);
+  letter-spacing: var(--ls-wide);
+  text-transform: uppercase;
+  margin-bottom: var(--sp-3);
+}
+
+.project-card__description {
+  font-size: var(--fs-sm);
+  color: var(--cl-text-secondary);
+  line-height: var(--lh-relaxed);
+}
+
+.project-card__link {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--sp-2);
+  margin-top: var(--sp-3);
+  font-size: var(--fs-sm);
+  font-weight: var(--fw-semibold);
+  color: var(--cl-blue);
+  transition: gap var(--dur-fast) var(--ease-out);
+}
+
+.project-card__link:hover {
+  gap: var(--sp-3);
+}
