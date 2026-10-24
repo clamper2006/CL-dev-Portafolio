@@ -4,7 +4,7 @@ document.addEventListener('DOMContentLoaded', () => {
   /* Initialize all modules */
   i18n.init();
   navigation.init();
-  orbital.init();
+  parametric.init();
   animations.init();
 
   /* Lang switcher event listeners */

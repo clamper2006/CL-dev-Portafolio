@@ -126,108 +126,22 @@
   z-index: 1;
 }
 
-/* ── Orbital animation container ── */
-.orbital-container {
-  position: relative;
-  width: clamp(320px, 30vw, 500px);
-  height: clamp(320px, 30vw, 500px);
-  perspective: 1200px;
-}
-
-.orbital-ring {
-  position: absolute;
-  inset: 0;
-  border-radius: 50%;
-  border: 1px solid rgba(var(--cl-blue-rgb), 0.15);
-  transform-style: preserve-3d;
-  will-change: transform;
-}
-
-.orbital-ring:nth-child(1) {
-  animation: orbit-1 25s linear infinite;
-  border-color: rgba(var(--cl-blue-rgb), 0.2);
-}
-
-.orbital-ring:nth-child(2) {
-  inset: 8%;
-  animation: orbit-2 30s linear infinite;
-  border-color: rgba(var(--cl-blue-rgb), 0.12);
-}
-
-.orbital-ring:nth-child(3) {
-  inset: 16%;
-  animation: orbit-3 22s linear infinite reverse;
-  border-color: rgba(var(--cl-blue-rgb), 0.08);
-}
-
-.orbital-ring:nth-child(4) {
-  inset: 4%;
-  animation: orbit-4 35s linear infinite;
-  border-color: rgba(var(--cl-blue-rgb), 0.06);
-}
-
-/* ── Orbital nodes ── */
-.orbital-node {
-  position: absolute;
-  width: 7px;
-  height: 7px;
-  background: var(--cl-blue);
-  border-radius: 50%;
-  box-shadow: 0 0 12px rgba(var(--cl-blue-rgb), 0.4);
+/* ── Parametric canvas animation ── */
+.parametric-canvas {
+  display: block;
+  width: 100%;
+  height: 100%;
+  min-width: clamp(300px, 28vw, 520px);
+  min-height: clamp(360px, 42vh, 560px);
   opacity: 0;
-  animation: node-appear 0.6s var(--ease-out) forwards;
+  animation: parametric-entrance 1.2s var(--ease-out) 0.3s forwards;
+  will-change: opacity;
 }
 
-.orbital-node:nth-child(1) { top: 0; left: 50%; transform: translate(-50%, -50%); animation-delay: 0.8s; }
-.orbital-node:nth-child(2) { bottom: 15%; right: 5%; animation-delay: 1.0s; }
-.orbital-node:nth-child(3) { top: 30%; left: 2%; animation-delay: 1.2s; }
-.orbital-node:nth-child(4) { bottom: 5%; left: 40%; animation-delay: 1.4s; }
-.orbital-node:nth-child(5) { top: 10%; right: 20%; animation-delay: 1.1s; width: 5px; height: 5px; }
-
-/* ── Orbital slide counter ── */
-.hero__slide-counter {
-  position: absolute;
-  bottom: 15%;
-  right: -10%;
-  display: flex;
-  align-items: center;
-  gap: var(--sp-3);
-  font-size: var(--fs-xs);
-  font-weight: var(--fw-medium);
-  color: var(--cl-text-muted);
-  letter-spacing: var(--ls-wide);
-}
-
-.hero__slide-counter .current {
-  font-size: var(--fs-md);
-  font-weight: var(--fw-bold);
-  color: var(--cl-charcoal);
-}
-
-/* ── Keyframes ── */
-@keyframes orbit-1 {
-  from { transform: rotateX(70deg) rotateZ(0deg); }
-  to   { transform: rotateX(70deg) rotateZ(360deg); }
-}
-
-@keyframes orbit-2 {
-  from { transform: rotateX(55deg) rotateY(25deg) rotateZ(0deg); }
-  to   { transform: rotateX(55deg) rotateY(25deg) rotateZ(360deg); }
-}
-
-@keyframes orbit-3 {
-  from { transform: rotateX(80deg) rotateY(-15deg) rotateZ(0deg); }
-  to   { transform: rotateX(80deg) rotateY(-15deg) rotateZ(360deg); }
-}
-
-@keyframes orbit-4 {
-  from { transform: rotateX(60deg) rotateY(40deg) rotateZ(0deg); }
-  to   { transform: rotateX(60deg) rotateY(40deg) rotateZ(360deg); }
-}
-
-@keyframes node-appear {
-  from { opacity: 0; transform: scale(0); }
-  to   { opacity: 1; transform: scale(1); }
+/* ── Parametric entrance ── */
+@keyframes parametric-entrance {
+  from { opacity: 0; }
+  to   { opacity: 1; }
 }
 
 /* ── Hero entrance stagger ── */
@@ -242,18 +156,8 @@
 .hero__content > *:nth-child(3) { animation-delay: 0.35s; }
 .hero__content > *:nth-child(4) { animation-delay: 0.5s; }
 
-.orbital-container {
-  opacity: 0;
-  transform: scale(0.88);
-  animation: orbital-entrance 1s var(--ease-out) 0.4s forwards;
-}
-
 @keyframes hero-reveal {
   to { opacity: 1; transform: translateY(0); }
-}
-
-@keyframes orbital-entrance {
-  to { opacity: 1; transform: scale(1); }
 }
 
 /* ── Stats row ── */

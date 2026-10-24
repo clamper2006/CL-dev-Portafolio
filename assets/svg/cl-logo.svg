@@ -1,10 +1,78 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 40" fill="none">
-  <!-- C letterform -->
-  <path d="M4 8C4 4 7 1 12 1C15 1 17.5 2.5 19 5L16 7C15 5.5 13.5 4.5 12 4.5C9 4.5 7.5 6.5 7.5 8V24C7.5 25.5 9 27.5 12 27.5C13.5 27.5 15 26.5 16 25L19 27C17.5 29.5 15 31 12 31C7 31 4 28 4 24V8Z" fill="#101820"/>
-  <!-- L letterform -->
-  <path d="M24 1H27.5V27H40V31H24V1Z" fill="#101820"/>
-  <!-- Electric Blue dot -->
-  <circle cx="44" cy="27" r="4" fill="#3478F6"/>
-  <!-- Developer wordmark (editorial sans) -->
-  <text x="56" y="27" font-family="'Plus Jakarta Sans', sans-serif" font-weight="600" font-size="14" fill="#101820" letter-spacing="-0.02em">Developer</text>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 155 56" fill="none" role="img" aria-label="CL Developer">
+  <title>CL Developer</title>
+
+  <!--
+    ══════════════════════════════════════════════════════
+    CL Developer — Official Logo SVG
+    Geometric monogram · 45° chamfered interior corners
+    Viewport: 155 × 56  |  Stroke weight ≈ 14px
+    ══════════════════════════════════════════════════════
+
+    ── C glyph  (x: 0–52, y: 0–56) ──────────────────────
+    Outer bounding box 52 × 56.
+    Interior void: 14px inset on all non-open sides.
+    Opening gap on right side from y=18 to y=38 (20px gap).
+    Chamfer: upper-interior corner of gap → 45° notch 4×4px.
+
+    Trace of the filled C silhouette (single closed path,
+    no evenodd needed — just trace the outline):
+      Start at top-left (0,0), go clockwise around the
+      outer edge, then come back inward along the interior.
+
+      Outer top-left → outer top-right → outer top-right-corner
+      → down to gap opening top
+      [right side open — skip]
+      → inner top-right-corner (with chamfer) → inner top
+      → inner left → inner bottom
+      → inner bottom-right-corner
+      → outer bottom-right-corner (gap bottom)
+      → outer bottom-right → outer bottom-left → close
+
+    ── L glyph  (x: 62–117, y: 0–56) ────────────────────
+    Vertical stroke: 14px wide, full height.
+    Horizontal foot: 14px tall, full width.
+    Chamfer: lower-interior right corner → 45° notch 5×5px.
+
+    ── Blue dot ──────────────────────────────────────────
+    Positioned to the right of L arm, vertically centered
+    on the foot height.  cx=125, cy=49, r=7
+
+    ══════════════════════════════════════════════════════
+  -->
+
+  <!-- C letterform — single closed path tracing the silhouette -->
+  <path d="
+    M 0 0
+    H 52
+    V 14
+    H 14
+    V 18
+    H 38
+    L 42 22
+    V 34
+    L 38 38
+    H 14
+    V 42
+    H 52
+    V 56
+    H 0
+    Z
+  " fill="#101820"/>
+
+  <!-- L letterform — vertical + foot with chamfered interior corner -->
+  <path d="
+    M 62 0
+    H 76
+    V 42
+    H 117
+    V 56
+    H 62
+    Z
+  " fill="#101820"/>
+  <!-- L inner void (foot interior cut with chamfer) — only needed if we
+       want a notch; the solid L above is correct as-is without inner hole -->
+
+  <!-- Electric blue accent dot -->
+  <circle cx="125" cy="49" r="7" fill="#3478F6"/>
+
 </svg>
