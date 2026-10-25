@@ -1,35 +1,6 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 56 56" fill="none" role="img" aria-label="CL Developer favicon">
-  <title>CL Developer</title>
-  <!-- Dark background square -->
-  <rect width="56" height="56" rx="8" fill="#101820"/>
-  <!-- C glyph (compact, white) -->
-  <path d="
-    M 4 4
-    H 25
-    V 10
-    H 10
-    V 13
-    H 20
-    L 22 15
-    V 21
-    L 20 23
-    H 10
-    V 26
-    H 25
-    V 32
-    H 4
-    Z
-  " fill="#F5F4F0"/>
-  <!-- L glyph (compact, white) -->
-  <path d="
-    M 28 4
-    H 34
-    V 26
-    H 48
-    V 32
-    H 28
-    Z
-  " fill="#F5F4F0"/>
-  <!-- Blue dot -->
-  <circle cx="51" cy="29" r="4" fill="#3478F6"/>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="-11.5 -37 200 200">
+  <style>.m{fill:#101820}@media (prefers-color-scheme:dark){.m{fill:#F5F4F0}}</style>
+  <path class="m" d="M109 0H54C46 0.6 41.5 4 37.4 7L6.2 38.2C4.3 40.5 1 46.5 0 54V63C0 69 2.5 74.5 7 79.5L31.2 103.6C34 105.8 37 107 40 107H79.5V85H47C32 85 21 73.5 21 59V46C21 31 29 19 42 18H92L109 0Z"/>
+  <path class="m" d="M91.3 29H110V107H166.8L148 126H91.3Z"/>
+  <circle cx="167.8" cy="89.4" r="8.6" fill="#3478F6"/>
 </svg>
