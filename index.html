@@ -3,9 +3,10 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script>document.documentElement.classList.add('js');</script>
   <title>CL Developer — Ideas que se convierten en productos digitales</title>
-  <meta name="description" content="Portafolio de César Alejandro — Desarrollador de software. Diseño y desarrollo web y móvil. Soluciones digitales con impacto real.">
-  <meta name="author" content="César Alejandro — CL Developer">
+  <meta name="description" content="Portafolio de César Lamper — Desarrollador de software. Diseño y desarrollo web y móvil. Soluciones digitales con impacto real.">
+  <meta name="author" content="César Lamper — CL Developer">
 
   <!-- Favicon -->
   <link rel="icon" href="favicon/favicon.svg" type="image/svg+xml">
@@ -59,8 +60,8 @@
       <!-- Desktop Nav -->
       <nav class="header__nav" aria-label="Navegación principal">
         <a href="#inicio" class="nav__link is-active" data-i18n="nav.inicio">Inicio</a>
-        <a href="#proyectos" class="nav__link" data-i18n="nav.proyectos">Proyectos</a>
         <a href="#sobre-mi" class="nav__link" data-i18n="nav.sobre-mi">Sobre mí</a>
+        <a href="#proyectos" class="nav__link" data-i18n="nav.proyectos">Proyectos</a>
         <a href="#amplify" class="nav__link" data-i18n="nav.amplify">Amplify</a>
         <a href="#contacto" class="nav__link" data-i18n="nav.contacto">Contacto</a>
       </nav>
@@ -87,8 +88,8 @@
   <div class="mobile-menu" id="mobile-menu" role="dialog" aria-label="Menú de navegación">
     <nav aria-label="Navegación móvil">
       <a href="#inicio" class="nav__link" data-i18n="nav.inicio">Inicio</a>
-      <a href="#proyectos" class="nav__link" data-i18n="nav.proyectos">Proyectos</a>
       <a href="#sobre-mi" class="nav__link" data-i18n="nav.sobre-mi">Sobre mí</a>
+      <a href="#proyectos" class="nav__link" data-i18n="nav.proyectos">Proyectos</a>
       <a href="#amplify" class="nav__link" data-i18n="nav.amplify">Amplify</a>
       <a href="#contacto" class="nav__link" data-i18n="nav.contacto">Contacto</a>
     </nav>
@@ -135,7 +136,7 @@
             <!-- Stats -->
             <div class="hero__stats">
               <div class="stat">
-                <span class="stat__value" data-i18n="hero.stat.1.value">+5</span>
+                <span class="stat__value" data-i18n="hero.stat.1.value">+3</span>
                 <span class="stat__label" data-i18n="hero.stat.1.label">Años de experiencia</span>
               </div>
               <div class="stat">
@@ -157,6 +158,122 @@
               aria-hidden="true"
             ></canvas>
           </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══════════════════════════════════════
+         ABOUT — «Sobre mí»
+         ═══════════════════════════════════════ -->
+    <section class="about-me" id="sobre-mi" aria-labelledby="about-title">
+      <div class="container">
+
+        <div class="about-me__grid">
+
+          <!-- Etiqueta + título -->
+          <header class="about-me__head">
+            <p class="eyebrow about-me__eyebrow" data-reveal data-delay="1" data-i18n="about.eyebrow">SOBRE MÍ</p>
+            <h2 class="about-me__title" id="about-title" data-reveal data-delay="2">
+              <span data-i18n="about.title.1">Detrás del código hay una persona</span>
+              <span class="text-accent" data-i18n="about.title.2">que busca transformar ideas en soluciones.</span>
+            </h2>
+          </header>
+
+          <!-- Fotografía -->
+          <figure class="about-me__figure" data-reveal data-delay="3">
+            <div class="about-me__plate">
+              <div class="about-me__frame">
+                <picture>
+                  <source type="image/avif"
+                    srcset="assets/img/about/cesar-lamper-480.avif 480w, assets/img/about/cesar-lamper-768.avif 768w, assets/img/about/cesar-lamper-1024.avif 1024w"
+                    sizes="(max-width: 768px) 88vw, (max-width: 1024px) 42vw, 480px">
+                  <source type="image/webp"
+                    srcset="assets/img/about/cesar-lamper-480.webp 480w, assets/img/about/cesar-lamper-768.webp 768w, assets/img/about/cesar-lamper-1024.webp 1024w"
+                    sizes="(max-width: 768px) 88vw, (max-width: 1024px) 42vw, 480px">
+                  <img
+                    src="assets/img/about/cesar-lamper-768.jpg"
+                    srcset="assets/img/about/cesar-lamper-480.jpg 480w, assets/img/about/cesar-lamper-768.jpg 768w, assets/img/about/cesar-lamper-1024.jpg 1024w"
+                    sizes="(max-width: 768px) 88vw, (max-width: 1024px) 42vw, 480px"
+                    width="1024" height="1536"
+                    loading="lazy" decoding="async"
+                    alt="Retrato de César Lamper: joven de cabello rizado, con chaqueta y camisa negras, sobre un fondo oscuro de estudio."
+                    data-i18n-alt="about.photo.alt">
+                </picture>
+              </div>
+              <span class="about-me__marks" aria-hidden="true"></span>
+            </div>
+            <figcaption class="about-me__caption">
+              <span class="about-me__caption-dot" aria-hidden="true"></span>
+              <span data-i18n="about.caption">César Lamper — Desarrollador web y de aplicaciones</span>
+            </figcaption>
+          </figure>
+
+          <!-- Presentación -->
+          <div class="about-me__body">
+            <p class="about-me__lead" data-reveal data-delay="4" data-i18n="about.p1">
+              Soy César Lamper, desarrollador web y de aplicaciones venezolano con más de tres años de experiencia. Joven, ambicioso y apasionado por la tecnología cuando sirve para resolver problemas reales.
+            </p>
+            <div class="about-me__text" data-reveal data-delay="5">
+              <p data-i18n="about.p2">Trabajo tanto en frontend como en backend, y combino programación, herramientas modernas e inteligencia artificial para construir sitios, aplicaciones y sistemas a la medida de cada necesidad.</p>
+              <p data-i18n="about.p3">Pero lo que más me interesa ocurre antes del código: entender a las personas, conocer sus negocios y detectar qué procesos puede mejorar la tecnología. Un buen sistema no solo funciona: simplifica el trabajo, ahorra tiempo y deja que cada quien se concentre en lo que de verdad importa.</p>
+              <p data-i18n="about.p4">Mi objetivo es convertir ideas y necesidades reales en herramientas digitales útiles, eficientes y listas para crecer.</p>
+            </div>
+            <div class="about-me__actions" data-reveal data-delay="6">
+              <a href="#contacto" class="btn btn--primary about-me__cta">
+                <span data-i18n="about.cta">Hablemos de tu proyecto</span>
+                <svg class="btn__arrow" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Skills -->
+        <div class="about-me__skills" data-reveal-group>
+
+          <!-- Frontend -->
+          <div class="skill-group">
+            <div class="skill-group__icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg>
+            </div>
+            <div>
+              <p class="skill-group__title" data-i18n="about.skill.1.title">Frontend</p>
+              <p class="skill-group__items" data-i18n="about.skill.1.items">HTML, CSS, JavaScript, React, Next.js</p>
+            </div>
+          </div>
+
+          <!-- Backend -->
+          <div class="skill-group">
+            <div class="skill-group__icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="3" width="20" height="14" rx="2"/><path d="M8 21h8"/><path d="M12 17v4"/></svg>
+            </div>
+            <div>
+              <p class="skill-group__title" data-i18n="about.skill.2.title">Backend</p>
+              <p class="skill-group__items" data-i18n="about.skill.2.items">PHP, SQL, Supabase, Python (aprendiendo)</p>
+            </div>
+          </div>
+
+          <!-- Mobile -->
+          <div class="skill-group">
+            <div class="skill-group__icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="5" y="2" width="14" height="20" rx="2"/><path d="M12 18h.01"/></svg>
+            </div>
+            <div>
+              <p class="skill-group__title" data-i18n="about.skill.3.title">Mobile</p>
+              <p class="skill-group__items" data-i18n="about.skill.3.items">Flutter</p>
+            </div>
+          </div>
+
+          <!-- Tools -->
+          <div class="skill-group">
+            <div class="skill-group__icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/></svg>
+            </div>
+            <div>
+              <p class="skill-group__title" data-i18n="about.skill.4.title">Herramientas</p>
+              <p class="skill-group__items" data-i18n="about.skill.4.items">Git</p>
+            </div>
+          </div>
+
         </div>
       </div>
     </section>
@@ -248,83 +365,6 @@
             </div>
           </article>
 
-        </div>
-      </div>
-    </section>
-
-    <!-- ═══════════════════════════════════════
-         ABOUT
-         ═══════════════════════════════════════ -->
-    <section class="about section" id="sobre-mi">
-      <div class="container">
-        <div class="section__header" data-reveal>
-          <p class="eyebrow" data-i18n="about.eyebrow">SOBRE MÍ</p>
-        </div>
-
-        <div class="about__inner">
-          <div class="about__content" data-reveal>
-            <h2 class="about__title">
-              <span data-i18n="about.title.1">Tecnología con</span><br>
-              <span class="text-accent" data-i18n="about.title.2">propósito.</span>
-            </h2>
-
-            <p class="about__description" data-i18n="about.description">
-              Soy un desarrollador apasionado por crear soluciones digitales que mejoren la vida de las personas y los negocios. Me enfoco en el desarrollo web y móvil, con un interés especial en la experiencia de usuario, la arquitectura limpia y el rendimiento.
-            </p>
-
-            <a href="#contacto" class="btn btn--primary about__cta">
-              <span data-i18n="about.cta">Conocer más</span>
-              <svg class="btn__arrow" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
-            </a>
-          </div>
-
-          <div class="about__skills" data-reveal-group>
-
-            <!-- Frontend -->
-            <div class="skill-group">
-              <div class="skill-group__icon">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg>
-              </div>
-              <div>
-                <p class="skill-group__title" data-i18n="about.skill.1.title">Frontend</p>
-                <p class="skill-group__items" data-i18n="about.skill.1.items">React, Next.js, Vue</p>
-              </div>
-            </div>
-
-            <!-- Backend -->
-            <div class="skill-group">
-              <div class="skill-group__icon">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="3" width="20" height="14" rx="2"/><path d="M8 21h8"/><path d="M12 17v4"/></svg>
-              </div>
-              <div>
-                <p class="skill-group__title" data-i18n="about.skill.2.title">Backend</p>
-                <p class="skill-group__items" data-i18n="about.skill.2.items">Node.js, Laravel, Python</p>
-              </div>
-            </div>
-
-            <!-- Mobile -->
-            <div class="skill-group">
-              <div class="skill-group__icon">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="5" y="2" width="14" height="20" rx="2"/><path d="M12 18h.01"/></svg>
-              </div>
-              <div>
-                <p class="skill-group__title" data-i18n="about.skill.3.title">Mobile</p>
-                <p class="skill-group__items" data-i18n="about.skill.3.items">Flutter, React Native</p>
-              </div>
-            </div>
-
-            <!-- Tools -->
-            <div class="skill-group">
-              <div class="skill-group__icon">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/></svg>
-              </div>
-              <div>
-                <p class="skill-group__title" data-i18n="about.skill.4.title">Herramientas</p>
-                <p class="skill-group__items" data-i18n="about.skill.4.items">Git, Docker, Figma, AWS</p>
-              </div>
-            </div>
-
-          </div>
         </div>
       </div>
     </section>
@@ -482,8 +522,8 @@
         <!-- Nav -->
         <nav class="footer__nav" aria-label="Navegación del footer">
           <a href="#inicio" data-i18n="nav.inicio">Inicio</a>
-          <a href="#proyectos" data-i18n="nav.proyectos">Proyectos</a>
           <a href="#sobre-mi" data-i18n="nav.sobre-mi">Sobre mí</a>
+          <a href="#proyectos" data-i18n="nav.proyectos">Proyectos</a>
           <a href="#amplify" data-i18n="nav.amplify">Amplify</a>
           <a href="#contacto" data-i18n="nav.contacto">Contacto</a>
         </nav>

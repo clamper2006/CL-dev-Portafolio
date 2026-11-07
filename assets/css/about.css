@@ -1,53 +1,166 @@
-/* ═══ About Section ═══ */
+/* ═══ About Section — «Sobre mí» ═══
+ * Composición editorial: fotografía a la izquierda, presentación a la derecha
+ * y fila de skills debajo. En móvil: título → foto → texto → skills.
+ * Usa solo tokens de variables.css y el sistema de reveal existente
+ * (data-reveal / data-reveal-group + IntersectionObserver de animations.js).
+ */
 
-.about {
+.about-me {
   background: var(--cl-bg-warm);
+  border-top: 1px solid var(--cl-divider);
+  padding-block: var(--section-gap);
 }
 
-.about__inner {
+/* ── Rejilla principal (escritorio) ── */
+.about-me__grid {
+  position: relative;
   display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: var(--sp-9);
+  grid-template-columns: repeat(12, minmax(0, 1fr));
+  column-gap: var(--sp-6);
+  row-gap: var(--sp-6);
   align-items: start;
 }
 
-.about__content {
-  max-width: 540px;
+/* Filete vertical entre fotografía y texto */
+.about-me__grid::before {
+  content: "";
+  grid-column: 6;
+  grid-row: 1 / span 2;
+  justify-self: center;
+  align-self: stretch;
+  width: 1px;
+  background: var(--cl-divider);
 }
 
-.about__title {
-  margin-bottom: var(--sp-6);
+.about-me__figure {
+  grid-column: 1 / span 5;
+  grid-row: 1 / span 2;
+  margin: 0;
 }
 
-.about__description {
-  font-size: var(--fs-base);
+.about-me__head {
+  grid-column: 7 / -1;
+  grid-row: 1;
+}
+
+.about-me__body {
+  grid-column: 7 / -1;
+  grid-row: 2;
+  max-width: 34rem;
+}
+
+/* ── Cabecera ── */
+.about-me__eyebrow {
+  margin-bottom: var(--sp-4);
+  color: var(--cl-text-secondary); /* contraste AA sobre el fondo crema */
+}
+
+.about-me__title {
+  font-size: clamp(1.875rem, 1.4rem + 1.8vw, 2.75rem);
+  line-height: var(--lh-snug);
+}
+
+/* ── Fotografía ── */
+.about-me__plate {
+  position: relative;
+}
+
+.about-me__frame {
+  position: relative;
+  aspect-ratio: 4 / 5;
+  overflow: hidden;
+  background: #101010; /* mismo tono que el fondo del retrato: sin saltos mientras carga */
+}
+
+.about-me__frame picture {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+.about-me__frame img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: 50% 14%;
+}
+
+/* Marcas de recorte en las esquinas (detalle editorial / plano técnico) */
+.about-me__marks {
+  --m: 16px;
+  --c: var(--cl-charcoal);
+  position: absolute;
+  inset: -12px;
+  pointer-events: none;
+  background:
+    linear-gradient(var(--c), var(--c)) top left / var(--m) 1px no-repeat,
+    linear-gradient(var(--c), var(--c)) top left / 1px var(--m) no-repeat,
+    linear-gradient(var(--c), var(--c)) top right / var(--m) 1px no-repeat,
+    linear-gradient(var(--c), var(--c)) top right / 1px var(--m) no-repeat,
+    linear-gradient(var(--c), var(--c)) bottom left / var(--m) 1px no-repeat,
+    linear-gradient(var(--c), var(--c)) bottom left / 1px var(--m) no-repeat,
+    linear-gradient(var(--c), var(--c)) bottom right / var(--m) 1px no-repeat,
+    linear-gradient(var(--c), var(--c)) bottom right / 1px var(--m) no-repeat;
+}
+
+.about-me__caption {
+  display: flex;
+  align-items: center;
+  gap: var(--sp-2);
+  margin-top: var(--sp-5);
+  font-family: var(--font-mono);
+  font-size: var(--fs-xs);
+  letter-spacing: var(--ls-wide);
+  text-transform: uppercase;
   color: var(--cl-text-secondary);
-  line-height: var(--lh-relaxed);
-  margin-bottom: var(--sp-7);
 }
 
-.about__cta {
+.about-me__caption-dot {
+  flex-shrink: 0;
+  width: 6px;
+  height: 6px;
+  background: var(--cl-blue);
+}
+
+/* ── Texto ── */
+.about-me__lead {
+  margin-bottom: var(--sp-5);
+  font-size: var(--fs-md);
+  font-weight: var(--fw-medium);
+  line-height: var(--lh-normal);
+  color: var(--cl-charcoal);
+}
+
+.about-me__text p {
+  margin-bottom: var(--sp-4);
+  font-size: var(--fs-base);
+  line-height: var(--lh-relaxed);
+  color: var(--cl-text-secondary);
+}
+
+.about-me__text p:last-child {
+  margin-bottom: 0;
+}
+
+.about-me__actions {
   margin-top: var(--sp-6);
 }
 
-/* ── Skills grid ── */
-.about__skills {
-  display: flex;
-  flex-direction: column;
+/* ── Skills (estilo de tarjeta conservado; ahora en fila) ── */
+.about-me__skills {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
   gap: var(--sp-6);
+  margin-top: var(--sp-9);
+  padding-top: var(--sp-7);
+  border-top: 1px solid var(--cl-divider);
 }
 
 .skill-group {
   display: flex;
   align-items: flex-start;
   gap: var(--sp-4);
-  padding-bottom: var(--sp-6);
-  border-bottom: 1px solid var(--cl-divider);
-}
-
-.skill-group:last-child {
-  border-bottom: none;
-  padding-bottom: 0;
 }
 
 .skill-group__icon {
@@ -75,34 +188,128 @@
 
 .skill-group__items {
   font-size: var(--fs-sm);
-  color: var(--cl-text-muted);
+  color: var(--cl-text-secondary); /* antes text-muted (4,06:1): ahora AA */
   line-height: var(--lh-relaxed);
 }
 
-/* ── About image/visual side ── */
-.about__visual {
-  position: relative;
-  border-radius: var(--radius-lg);
-  overflow: hidden;
-  aspect-ratio: 4 / 3;
-  background: linear-gradient(135deg, #1a1a2e 0%, #16213e 50%, #0f3460 100%);
-  display: flex;
-  align-items: flex-end;
-  padding: var(--sp-6);
+/* ═══ Entrada progresiva ═══
+ * 1) Sin JavaScript el contenido es siempre visible.
+ * 2) El estado oculto solo existe cuando <html class="js"> está presente.
+ * 3) Solo se animan opacity y transform (más un clip-path en la foto).
+ */
+.about-me [data-reveal],
+.about-me [data-reveal-group] > * {
+  opacity: 1;
+  transform: none;
 }
 
-.about__visual-text {
-  font-family: var(--font-display);
-  font-style: italic;
-  font-size: var(--fs-lg);
-  color: rgba(255,255,255,0.85);
-  line-height: var(--lh-snug);
+.js .about-me [data-reveal]:not(.is-visible) {
+  opacity: 0;
+  transform: translateY(16px);
 }
 
-.about__visual img {
-  position: absolute;
-  inset: 0;
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
+.js .about-me [data-reveal-group]:not(.is-visible) > * {
+  opacity: 0;
+  transform: translateY(20px);
+}
+
+/* Secuencia: etiqueta → título → foto → texto → elementos secundarios */
+.about-me [data-delay="1"] { transition-delay: 0ms; }
+.about-me [data-delay="2"] { transition-delay: 90ms; }
+.about-me [data-delay="3"] { transition-delay: 180ms; }
+.about-me [data-delay="4"] { transition-delay: 300ms; }
+.about-me [data-delay="5"] { transition-delay: 400ms; }
+.about-me [data-delay="6"] { transition-delay: 500ms; }
+
+/* Foto: se destapa de arriba abajo mientras la imagen se asienta */
+.about-me__figure[data-reveal] {
+  transform: none !important;
+}
+
+.about-me__frame {
+  clip-path: inset(0 0 0 0);
+  transition: clip-path 900ms var(--ease-out) 180ms;
+}
+
+.about-me__frame img {
+  transition: transform 1100ms var(--ease-out) 180ms;
+}
+
+.js .about-me__figure:not(.is-visible) .about-me__frame {
+  clip-path: inset(0 0 100% 0);
+}
+
+.js .about-me__figure:not(.is-visible) .about-me__frame img {
+  transform: scale(1.06);
+  will-change: transform;
+}
+
+/* ═══ Responsive ═══ */
+@media (max-width: 1024px) {
+  .about-me__grid {
+    column-gap: var(--sp-5);
+  }
+
+  .about-me__skills {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    row-gap: var(--sp-6);
+  }
+}
+
+@media (max-width: 768px) {
+  /* Móvil: título → foto → texto (mismo orden que el DOM) */
+  .about-me__grid {
+    display: flex;
+    flex-direction: column;
+    gap: var(--sp-6);
+  }
+
+  .about-me__grid::before {
+    display: none;
+  }
+
+  .about-me__figure {
+    width: 100%;
+    max-width: 420px;
+    margin-inline: auto;
+  }
+
+  .about-me__body {
+    max-width: none;
+  }
+
+  .about-me__skills {
+    margin-top: var(--sp-8);
+    padding-top: var(--sp-6);
+  }
+}
+
+@media (max-width: 600px) {
+  .about-me__skills {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 430px) {
+  .about-me__title {
+    font-size: clamp(1.75rem, 7.4vw, 2rem);
+  }
+
+  .about-me__actions .btn {
+    width: 100%;
+    justify-content: center;
+  }
+}
+
+/* ═══ Movimiento reducido (solo esta sección) ═══ */
+@media (prefers-reduced-motion: reduce) {
+  .about-me [data-reveal],
+  .about-me [data-reveal-group] > *,
+  .about-me__frame,
+  .about-me__frame img {
+    transition: none !important;
+    transform: none !important;
+    clip-path: none !important;
+    opacity: 1 !important;
+  }
 }

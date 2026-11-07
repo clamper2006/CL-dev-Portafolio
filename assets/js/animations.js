@@ -4,9 +4,13 @@ const animations = {
   observer: null,
 
   init() {
-    if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
-      /* Show all elements immediately */
-      document.querySelectorAll('[data-reveal], [data-reveal-group]').forEach(el => {
+    const items = document.querySelectorAll('[data-reveal], [data-reveal-group]');
+
+    /* Show all elements immediately when motion is reduced
+       or when IntersectionObserver is not available */
+    if (window.matchMedia('(prefers-reduced-motion: reduce)').matches ||
+        !('IntersectionObserver' in window)) {
+      items.forEach(el => {
         el.classList.add('is-visible');
       });
       return;
@@ -24,7 +28,7 @@ const animations = {
       rootMargin: '0px 0px -50px 0px'
     });
 
-    document.querySelectorAll('[data-reveal], [data-reveal-group]').forEach(el => {
+    items.forEach(el => {
       this.observer.observe(el);
     });
   },

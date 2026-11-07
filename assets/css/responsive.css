@@ -16,11 +16,6 @@
     grid-template-columns: repeat(2, 1fr);
   }
 
-  .about__inner {
-    grid-template-columns: 1fr 1fr;
-    gap: var(--sp-7);
-  }
-
   .amplify__inner {
     grid-template-columns: 1fr 1fr;
     gap: var(--sp-7);
@@ -72,15 +67,6 @@
   .grid-2col {
     grid-template-columns: 1fr;
     gap: var(--sp-6);
-  }
-
-  .about__inner {
-    grid-template-columns: 1fr;
-    gap: var(--sp-6);
-  }
-
-  .about__visual {
-    order: -1;
   }
 
   .amplify__inner {

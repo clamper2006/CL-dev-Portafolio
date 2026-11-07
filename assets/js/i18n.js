@@ -4,8 +4,8 @@ const translations = {
   es: {
     /* Nav */
     'nav.inicio': 'Inicio',
-    'nav.proyectos': 'Proyectos',
     'nav.sobre-mi': 'Sobre mí',
+    'nav.proyectos': 'Proyectos',
     'nav.amplify': 'Amplify',
     'nav.contacto': 'Contacto',
 
@@ -16,12 +16,33 @@ const translations = {
     'hero.description': 'Desarrollo soluciones web y móviles que combinan diseño, tecnología y estrategia. Acompaño a marcas y personas a construir productos que generan impacto.',
     'hero.cta.primary': 'Ver proyectos',
     'hero.cta.secondary': 'Contactar',
-    'hero.stat.1.value': '+5',
+    'hero.stat.1.value': '+3',
     'hero.stat.1.label': 'Años de experiencia',
     'hero.stat.2.value': '10+',
     'hero.stat.2.label': 'Proyectos completados',
     'hero.stat.3.value': '100%',
     'hero.stat.3.label': 'Compromiso con la calidad',
+
+    /* About */
+    'about.eyebrow': 'SOBRE MÍ',
+    'about.title.1': 'Detrás del código hay una persona',
+    'about.title.2': 'que busca transformar ideas en soluciones.',
+    'about.p1': 'Soy César Lamper, desarrollador web y de aplicaciones venezolano con más de tres años de experiencia. Joven, ambicioso y apasionado por la tecnología cuando sirve para resolver problemas reales.',
+    'about.p2': 'Trabajo tanto en frontend como en backend, y combino programación, herramientas modernas e inteligencia artificial para construir sitios, aplicaciones y sistemas a la medida de cada necesidad.',
+    'about.p3': 'Pero lo que más me interesa ocurre antes del código: entender a las personas, conocer sus negocios y detectar qué procesos puede mejorar la tecnología. Un buen sistema no solo funciona: simplifica el trabajo, ahorra tiempo y deja que cada quien se concentre en lo que de verdad importa.',
+    'about.p4': 'Mi objetivo es convertir ideas y necesidades reales en herramientas digitales útiles, eficientes y listas para crecer.',
+    'about.cta': 'Hablemos de tu proyecto',
+    'about.caption': 'César Lamper — Desarrollador web y de aplicaciones',
+    'about.photo.alt': 'Retrato de César Lamper: joven de cabello rizado, con chaqueta y camisa negras, sobre un fondo oscuro de estudio.',
+
+    'about.skill.1.title': 'Frontend',
+    'about.skill.1.items': 'HTML, CSS, JavaScript, React, Next.js',
+    'about.skill.2.title': 'Backend',
+    'about.skill.2.items': 'PHP, SQL, Supabase, Python (aprendiendo)',
+    'about.skill.3.title': 'Mobile',
+    'about.skill.3.items': 'Flutter',
+    'about.skill.4.title': 'Herramientas',
+    'about.skill.4.items': 'Git',
 
     /* Projects */
     'projects.eyebrow': 'PROYECTOS DESTACADOS',
@@ -41,23 +62,6 @@ const translations = {
     'project.3.name': 'Amplify Studio',
     'project.3.meta': 'Web / Agencia Digital',
     'project.3.description': 'Sitio web corporativo y panel de gestión para la agencia de desarrollo, Amplify.',
-
-    /* About */
-    'about.eyebrow': 'SOBRE MÍ',
-    'about.title.1': 'Tecnología con',
-    'about.title.2': 'propósito.',
-    'about.description': 'Soy un desarrollador apasionado por crear soluciones digitales que mejoren la vida de las personas y los negocios. Me enfoco en el desarrollo web y móvil, con un interés especial en la experiencia de usuario, la arquitectura limpia y el rendimiento.',
-    'about.cta': 'Conocer más',
-    'about.visual.text': 'Diseñar. Construir. Escalar.',
-
-    'about.skill.1.title': 'Frontend',
-    'about.skill.1.items': 'React, Next.js, Vue',
-    'about.skill.2.title': 'Backend',
-    'about.skill.2.items': 'Node.js, Laravel, Python',
-    'about.skill.3.title': 'Mobile',
-    'about.skill.3.items': 'Flutter, React Native',
-    'about.skill.4.title': 'Herramientas',
-    'about.skill.4.items': 'Git, Docker, Figma, AWS',
 
     /* Amplify */
     'amplify.eyebrow': 'PARTE DE MI TRAYECTORIA',
@@ -101,8 +105,8 @@ const translations = {
   en: {
     /* Nav */
     'nav.inicio': 'Home',
-    'nav.proyectos': 'Projects',
     'nav.sobre-mi': 'About',
+    'nav.proyectos': 'Projects',
     'nav.amplify': 'Amplify',
     'nav.contacto': 'Contact',
 
@@ -113,12 +117,33 @@ const translations = {
     'hero.description': 'I build web and mobile solutions that combine design, technology, and strategy. I help brands and people create products with real impact.',
     'hero.cta.primary': 'View projects',
     'hero.cta.secondary': 'Get in touch',
-    'hero.stat.1.value': '+5',
+    'hero.stat.1.value': '+3',
     'hero.stat.1.label': 'Years of experience',
     'hero.stat.2.value': '10+',
     'hero.stat.2.label': 'Completed projects',
     'hero.stat.3.value': '100%',
     'hero.stat.3.label': 'Quality commitment',
+
+    /* About */
+    'about.eyebrow': 'ABOUT ME',
+    'about.title.1': 'Behind the code is a person',
+    'about.title.2': 'looking to turn ideas into solutions.',
+    'about.p1': "I'm César Lamper, a Venezuelan web and app developer with over three years of experience. Young, ambitious and passionate about technology when it solves real problems.",
+    'about.p2': 'I work across frontend and backend, combining programming, modern tools and artificial intelligence to build websites, apps and systems tailored to each need.',
+    'about.p3': "But what interests me most happens before the code: understanding people, getting to know their businesses and spotting the processes technology can improve. A good system doesn't just work — it simplifies the job, saves time and lets people focus on what truly matters.",
+    'about.p4': 'My goal is to turn real ideas and needs into digital tools that are useful, efficient and ready to grow.',
+    'about.cta': "Let's talk about your project",
+    'about.caption': 'César Lamper — Web and app developer',
+    'about.photo.alt': 'Portrait of César Lamper: a young man with curly hair, wearing a black jacket and shirt, against a dark studio background.',
+
+    'about.skill.1.title': 'Frontend',
+    'about.skill.1.items': 'HTML, CSS, JavaScript, React, Next.js',
+    'about.skill.2.title': 'Backend',
+    'about.skill.2.items': 'PHP, SQL, Supabase, Python (learning)',
+    'about.skill.3.title': 'Mobile',
+    'about.skill.3.items': 'Flutter',
+    'about.skill.4.title': 'Tools',
+    'about.skill.4.items': 'Git',
 
     /* Projects */
     'projects.eyebrow': 'FEATURED PROJECTS',
@@ -138,23 +163,6 @@ const translations = {
     'project.3.name': 'Amplify Studio',
     'project.3.meta': 'Web / Digital Agency',
     'project.3.description': 'Corporate website and management panel for the development agency, Amplify.',
-
-    /* About */
-    'about.eyebrow': 'ABOUT ME',
-    'about.title.1': 'Technology with',
-    'about.title.2': 'purpose.',
-    'about.description': "I'm a developer passionate about creating digital solutions that improve people's lives and businesses. I focus on web and mobile development, with a special interest in user experience, clean architecture, and performance.",
-    'about.cta': 'Learn more',
-    'about.visual.text': 'Design. Build. Scale.',
-
-    'about.skill.1.title': 'Frontend',
-    'about.skill.1.items': 'React, Next.js, Vue',
-    'about.skill.2.title': 'Backend',
-    'about.skill.2.items': 'Node.js, Laravel, Python',
-    'about.skill.3.title': 'Mobile',
-    'about.skill.3.items': 'Flutter, React Native',
-    'about.skill.4.title': 'Tools',
-    'about.skill.4.items': 'Git, Docker, Figma, AWS',
 
     /* Amplify */
     'amplify.eyebrow': 'PART OF MY JOURNEY',
@@ -245,6 +253,11 @@ const i18n = {
     document.querySelectorAll('[data-i18n-aria]').forEach(el => {
       const key = el.getAttribute('data-i18n-aria');
       el.setAttribute('aria-label', this.t(key));
+    });
+
+    document.querySelectorAll('[data-i18n-alt]').forEach(el => {
+      const key = el.getAttribute('data-i18n-alt');
+      el.setAttribute('alt', this.t(key));
     });
   },
 
