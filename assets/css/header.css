@@ -172,3 +172,18 @@
   margin-top: var(--sp-6);
   font-size: var(--fs-md);
 }
+
+/* Con seis enlaces, el menú de escritorio se compacta en tablet */
+@media (max-width: 1024px) {
+  .header__nav {
+    gap: var(--sp-5);
+  }
+}
+
+/* Menú móvil: enlaces en columna centrada */
+.mobile-menu nav {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--sp-5);
+}

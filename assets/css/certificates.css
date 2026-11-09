@@ -1,0 +1,309 @@
+/* ═══ Certificates Section — «Certificados» ═══
+ * Visor + selector: un certificado grande a la izquierda (placa oscura con
+ * marcas de recorte, mismo lenguaje que la foto de «Sobre mí») y la lista
+ * de certificados a la derecha. Elegir uno lo cambia en el visor.
+ * Usa solo tokens de variables.css y el sistema de reveal existente.
+ */
+
+.certs {
+  background: var(--cl-bg-warm);
+}
+
+.certs__summary {
+  max-width: 22rem;
+  font-size: var(--fs-sm);
+  line-height: var(--lh-relaxed);
+  color: var(--cl-text-secondary);
+}
+
+/* ── Rejilla visor + lista ── */
+.certs__layout {
+  display: grid;
+  grid-template-columns: minmax(0, 7fr) minmax(0, 5fr);
+  column-gap: var(--sp-9);
+  align-items: start;
+}
+
+/* ── Visor ── */
+.certs__stage {
+  display: grid;
+  row-gap: var(--sp-7); /* solo se ve sin JavaScript (placas en columna) */
+}
+
+.cert-plate {
+  margin: 0;
+}
+
+.cert-plate__frame {
+  position: relative;
+  aspect-ratio: 1400 / 1082;
+  background: var(--cl-charcoal); /* sin saltos mientras carga la imagen */
+}
+
+.cert-plate__link,
+.cert-plate__frame picture,
+.cert-plate__frame img {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+.cert-plate__frame img {
+  object-fit: cover;
+}
+
+/* Marcas de recorte en las esquinas (igual que la fotografía de «Sobre mí») */
+.cert-plate__frame::after {
+  --m: 16px;
+  --c: var(--cl-charcoal);
+  content: "";
+  position: absolute;
+  inset: -12px;
+  pointer-events: none;
+  background:
+    linear-gradient(var(--c), var(--c)) top left / var(--m) 1px no-repeat,
+    linear-gradient(var(--c), var(--c)) top left / 1px var(--m) no-repeat,
+    linear-gradient(var(--c), var(--c)) top right / var(--m) 1px no-repeat,
+    linear-gradient(var(--c), var(--c)) top right / 1px var(--m) no-repeat,
+    linear-gradient(var(--c), var(--c)) bottom left / var(--m) 1px no-repeat,
+    linear-gradient(var(--c), var(--c)) bottom left / 1px var(--m) no-repeat,
+    linear-gradient(var(--c), var(--c)) bottom right / var(--m) 1px no-repeat,
+    linear-gradient(var(--c), var(--c)) bottom right / 1px var(--m) no-repeat;
+}
+
+.cert-plate__caption {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: var(--sp-2) var(--sp-4);
+  margin-top: var(--sp-5);
+}
+
+.cert-plate__open {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--sp-2);
+  font-size: var(--fs-sm);
+  font-weight: var(--fw-semibold);
+  color: var(--cl-blue);
+  transition: gap var(--dur-fast) var(--ease-out);
+}
+
+.cert-plate__open:hover {
+  gap: var(--sp-3);
+}
+
+.cert-plate__open svg {
+  flex-shrink: 0;
+}
+
+.cert-plate__issuer {
+  font-family: var(--font-mono);
+  font-size: var(--fs-xs);
+  letter-spacing: var(--ls-wide);
+  color: var(--cl-text-secondary); /* contraste AA sobre el fondo crema */
+}
+
+/* Con JavaScript: las placas se apilan en la misma celda y se cruzan */
+.js .cert-plate {
+  grid-area: 1 / 1;
+  opacity: 0;
+  visibility: hidden;
+  transform: scale(0.985);
+  transition: opacity var(--dur-base) var(--ease-out),
+              transform var(--dur-slow) var(--ease-out),
+              visibility 0s linear var(--dur-base);
+}
+
+.js .cert-plate.is-active {
+  opacity: 1;
+  visibility: visible;
+  transform: none;
+  transition-delay: 0s;
+}
+
+/* ── Lista ── */
+.certs__list {
+  display: flex;
+  flex-direction: column;
+  border-top: 1px solid var(--cl-divider);
+}
+
+.cert-row {
+  position: relative;
+  display: block;
+  width: 100%;
+  padding: var(--sp-5) var(--sp-4) var(--sp-5) var(--sp-6);
+  border-bottom: 1px solid var(--cl-divider);
+  text-align: left;
+  color: var(--cl-text-secondary);
+  transition: color var(--dur-fast) var(--ease-soft);
+}
+
+/* Marca de selección: filete azul que baja desde arriba */
+.cert-row::before {
+  content: "";
+  position: absolute;
+  top: -1px;
+  bottom: -1px;
+  left: 0;
+  width: 2px;
+  background: var(--cl-blue);
+  transform: scaleY(0);
+  transform-origin: top;
+  transition: transform var(--dur-base) var(--ease-out);
+}
+
+.cert-row.is-active::before {
+  transform: scaleY(1);
+}
+
+.cert-row:hover,
+.cert-row.is-active {
+  color: var(--cl-charcoal);
+}
+
+.cert-row:focus-visible {
+  outline: 2px solid var(--cl-blue);
+  outline-offset: -2px;
+}
+
+.cert-row__type {
+  display: block;
+  margin-bottom: var(--sp-1);
+  font-size: var(--fs-xs);
+  font-weight: var(--fw-medium);
+  color: var(--cl-text-secondary);
+}
+
+.cert-row__title {
+  display: block;
+  font-size: var(--fs-md);
+  font-weight: var(--fw-bold);
+  line-height: var(--lh-snug);
+  letter-spacing: var(--ls-tight);
+}
+
+/* Descripción: solo la del certificado elegido (se despliega) */
+.cert-row__desc {
+  display: grid;
+  grid-template-rows: 1fr;
+}
+
+.cert-row__clip {
+  display: block;
+  min-height: 0;
+  overflow: hidden;
+}
+
+.cert-row__text {
+  display: block;
+  padding-top: var(--sp-2);
+  font-size: var(--fs-sm);
+  font-weight: var(--fw-regular);
+  line-height: var(--lh-relaxed);
+  letter-spacing: var(--ls-normal);
+  color: var(--cl-text-secondary);
+}
+
+.js .cert-row__desc {
+  transition: grid-template-rows var(--dur-base) var(--ease-out),
+              opacity var(--dur-base) var(--ease-out),
+              visibility 0s linear 0s;
+}
+
+.js .cert-row:not(.is-active) .cert-row__desc {
+  grid-template-rows: 0fr;
+  opacity: 0;
+  visibility: hidden;
+  transition-delay: 0s, 0s, var(--dur-base);
+}
+
+.cert-row__meta {
+  display: flex;
+  align-items: center;
+  gap: var(--sp-3);
+  margin-top: var(--sp-3);
+  font-family: var(--font-mono);
+  font-size: var(--fs-xs);
+  font-weight: var(--fw-regular);
+  letter-spacing: var(--ls-normal);
+  color: var(--cl-text-secondary);
+}
+
+.cert-row__meta > * + * {
+  padding-left: var(--sp-3);
+  border-left: 1px solid var(--cl-divider);
+}
+
+/* Sin JavaScript no hay selector: solo las placas con su enlace al PDF */
+html:not(.js) .certs__layout {
+  grid-template-columns: minmax(0, 1fr);
+}
+
+html:not(.js) .certs__list {
+  display: none;
+}
+
+/* ═══ Entrada progresiva ═══
+ * El estado oculto solo existe con <html class="js">; sin JavaScript
+ * el contenido es siempre visible. Solo opacity y transform.
+ */
+.certs [data-reveal] {
+  opacity: 1;
+  transform: none;
+}
+
+.js .certs [data-reveal]:not(.is-visible) {
+  opacity: 0;
+  transform: translateY(16px);
+}
+
+/* ═══ Responsive ═══ */
+@media (max-width: 1024px) {
+  .certs__layout {
+    column-gap: var(--sp-7);
+  }
+}
+
+@media (max-width: 768px) {
+  /* Móvil: certificado arriba, selector debajo */
+  .certs__layout {
+    grid-template-columns: minmax(0, 1fr);
+    row-gap: var(--sp-8);
+  }
+
+  .certs__summary {
+    max-width: none;
+  }
+
+  .cert-row {
+    padding-block: var(--sp-4);
+  }
+}
+
+@media (max-width: 430px) {
+  .cert-row__title {
+    font-size: var(--fs-base);
+  }
+}
+
+/* ═══ Movimiento reducido (solo esta sección) ═══ */
+@media (prefers-reduced-motion: reduce) {
+  .certs [data-reveal],
+  .cert-plate,
+  .cert-row::before,
+  .cert-row__desc {
+    transition: none !important;
+    transform: none !important;
+  }
+
+  .certs [data-reveal] {
+    opacity: 1 !important;
+  }
+
+  .cert-row.is-active::before {
+    transform: scaleY(1) !important;
+  }
+}

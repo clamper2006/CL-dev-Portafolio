@@ -5,6 +5,7 @@ document.addEventListener('DOMContentLoaded', () => {
   i18n.init();
   navigation.init();
   parametric.init();
+  certificates.init();
   animations.init();
 
   /* Lang switcher event listeners */

@@ -24,6 +24,7 @@ Diseño editorial moderno · Animación orbital interactiva · Experiencia bilin
 | **Diseño Editorial** | Estética de productos de alta gama (inspirado en Apple y editoriales contemporáneos) |
 | **Animación Orbital 3D** | Construida 100 % con CSS 3D Transforms + SVG (sin Three.js ni librerías pesadas) |
 | **Bilingüe nativo** | Sistema i18n en cliente (ES / EN) sin recargas de página |
+| **Sección Certificados** | Visor + selector accesible (teclado, ES/EN) con 4 certificados de IA y ciberseguridad, miniaturas AVIF/WebP/JPG y enlace a PDF |
 | **Sección Amplify** | Paleta oficial (#3BF087 · #0A0A0C) + activos autorizados de la agencia |
 | **100 % Responsivo** | Optimizado desde 320 px hasta monitores ultrawide |
 | **Accesibilidad** | `prefers-reduced-motion`, navegación por teclado y HTML semántico |
@@ -50,8 +51,10 @@ CL-dev-Portafolio/
 ├── robots.txt / sitemap       # SEO
 ├── assets/
 │   ├── css/                   # Estilos modulares (variables, base, secciones…)
-│   ├── js/                    # Scripts (i18n, orbital, nav, animaciones)
+│   ├── js/                    # Scripts (i18n, orbital, nav, animaciones, certificates)
 │   ├── svg/                   # Logo vectorial CL Developer
+│   ├── certificates/          # PDFs de los certificados
+│   ├── img/certificates/      # Miniaturas optimizadas de los certificados
 │   ├── amplify/               # Logos e iconos oficiales Amplify
 │   └── images/                # Recursos multimedia
 └── favicon/                   # Favicons SVG + PNG

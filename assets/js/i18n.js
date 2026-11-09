@@ -6,6 +6,7 @@ const translations = {
     'nav.inicio': 'Inicio',
     'nav.sobre-mi': 'Sobre mí',
     'nav.proyectos': 'Proyectos',
+    'nav.certificados': 'Certificados',
     'nav.amplify': 'Amplify',
     'nav.contacto': 'Contacto',
 
@@ -63,6 +64,38 @@ const translations = {
     'project.3.meta': 'Web / Agencia Digital',
     'project.3.description': 'Sitio web corporativo y panel de gestión para la agencia de desarrollo, Amplify.',
 
+    /* Certificados */
+    'certs.eyebrow': 'CERTIFICACIONES',
+    'certs.title.1': 'Formación continua en IA',
+    'certs.title.2': 'y ciberseguridad.',
+    'certs.summary': 'Cuatro certificados y 24 horas de formación con BIG school.',
+    'certs.list.label': 'Lista de certificados',
+    'certs.open': 'Abrir certificado (PDF)',
+    'certs.issuer': 'Emitido por BIG school',
+    'certs.hours': '6 horas',
+    'certs.type.attendance': 'Certificado de asistencia',
+    'certs.type.initiation': 'Certificado de iniciación',
+
+    'certs.1.title': 'Ciberseguridad y Hacking Ético',
+    'certs.1.desc': 'Técnicas de detección de vulnerabilidades y defensa digital.',
+    'certs.1.date': '2 nov 2026',
+    'certs.1.alt': 'Certificado de asistencia al curso de Ciberseguridad y Hacking Ético de BIG school, otorgado a César Alejandro Lamper Rodríguez. Duración: 6 horas. Fecha: 2 de noviembre de 2026.',
+
+    'certs.2.title': 'Desarrollo con IA: Programa con Agentes',
+    'certs.2.desc': 'Jornadas formativas para programar con agentes de IA.',
+    'certs.2.date': '17 jul 2026',
+    'certs.2.alt': 'Certificado de iniciación al desarrollo con IA, jornadas «Desarrollo con IA: Programa con Agentes» de BIG school, otorgado a César Alejandro Lamper Rodriguez. Duración: 6 horas. Fecha: 17 de julio de 2026.',
+
+    'certs.3.title': 'Curso de IA: de 0 a Agentes',
+    'certs.3.desc': 'Dominar la IA, ganar competitividad y entender cómo trabajan los agentes.',
+    'certs.3.date': '3 jun 2026',
+    'certs.3.alt': 'Certificado de asistencia al Curso de IA «De 0 a Agentes» de BIG school, otorgado a César Alejandro Lamper Rodriguez. Duración: 6 horas. Fecha: 3 de junio de 2026.',
+
+    'certs.4.title': 'Desarrollo con IA: de 0 a Producción',
+    'certs.4.desc': 'Jornadas formativas para llevar el desarrollo con IA de cero a producción.',
+    'certs.4.date': '13 mar 2026',
+    'certs.4.alt': 'Certificado de iniciación al desarrollo con IA, jornadas «Desarrollo con IA: de 0 a Producción» de BIG school, otorgado a César Alejandro Lamper Rodriguez. Duración: 6 horas. Fecha: 13 de marzo de 2026.',
+
     /* Amplify */
     'amplify.eyebrow': 'PARTE DE MI TRAYECTORIA',
     'amplify.title.1': 'Las buenas',
@@ -107,6 +140,7 @@ const translations = {
     'nav.inicio': 'Home',
     'nav.sobre-mi': 'About',
     'nav.proyectos': 'Projects',
+    'nav.certificados': 'Certificates',
     'nav.amplify': 'Amplify',
     'nav.contacto': 'Contact',
 
@@ -163,6 +197,38 @@ const translations = {
     'project.3.name': 'Amplify Studio',
     'project.3.meta': 'Web / Digital Agency',
     'project.3.description': 'Corporate website and management panel for the development agency, Amplify.',
+
+    /* Certificates */
+    'certs.eyebrow': 'CERTIFICATIONS',
+    'certs.title.1': 'Continuous training in AI',
+    'certs.title.2': 'and cybersecurity.',
+    'certs.summary': 'Four certificates and 24 hours of training with BIG school.',
+    'certs.list.label': 'Certificate list',
+    'certs.open': 'Open certificate (PDF)',
+    'certs.issuer': 'Issued by BIG school',
+    'certs.hours': '6 hours',
+    'certs.type.attendance': 'Certificate of attendance',
+    'certs.type.initiation': 'Certificate of introduction',
+
+    'certs.1.title': 'Cybersecurity and Ethical Hacking',
+    'certs.1.desc': 'Vulnerability detection techniques and digital defense.',
+    'certs.1.date': 'Nov 2, 2026',
+    'certs.1.alt': 'Certificate of attendance for the Cybersecurity and Ethical Hacking course by BIG school, awarded to César Alejandro Lamper Rodríguez. Duration: 6 hours. Date: November 2, 2026.',
+
+    'certs.2.title': 'AI Development: Programming with Agents',
+    'certs.2.desc': 'Training sessions on programming with AI agents.',
+    'certs.2.date': 'Jul 17, 2026',
+    'certs.2.alt': 'Certificate of introduction to AI development, “AI Development: Programming with Agents” sessions by BIG school, awarded to César Alejandro Lamper Rodriguez. Duration: 6 hours. Date: July 17, 2026.',
+
+    'certs.3.title': 'AI Course: from 0 to Agents',
+    'certs.3.desc': 'Mastering AI, gaining a competitive edge and understanding how agents work.',
+    'certs.3.date': 'Jun 3, 2026',
+    'certs.3.alt': 'Certificate of attendance for the AI Course “From 0 to Agents” by BIG school, awarded to César Alejandro Lamper Rodriguez. Duration: 6 hours. Date: June 3, 2026.',
+
+    'certs.4.title': 'AI Development: from 0 to Production',
+    'certs.4.desc': 'Training sessions on taking AI development from zero to production.',
+    'certs.4.date': 'Mar 13, 2026',
+    'certs.4.alt': 'Certificate of introduction to AI development, “AI Development: from 0 to Production” sessions by BIG school, awarded to César Alejandro Lamper Rodriguez. Duration: 6 hours. Date: March 13, 2026.',
 
     /* Amplify */
     'amplify.eyebrow': 'PART OF MY JOURNEY',
